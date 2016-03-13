@@ -16,7 +16,6 @@
  */
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth'], function () {
     Route::get('index', 'AdminController@index');
-
     Route::get('articles/index', 'ArticlesController@index');
     Route::get('articles/trash', 'ArticlesController@trash');
     Route::post('articles/restore/{id}', 'ArticlesController@restore');
@@ -71,7 +70,6 @@ Route::get('bar', function () {
  * home
  */
 Route::group(['namespace' => 'Home'], function () {
-
     Route::resource('/', 'HomeController@index');
 
     Route::get('tags', 'TagsController@index');
@@ -79,7 +77,8 @@ Route::group(['namespace' => 'Home'], function () {
 
     Route::get('categories', 'CategoriesController@index');
     Route::get('categories/{slug}', 'CategoriesController@show');
-
+    Route::get('abouts', 'AboutController@index');
+    Route::get('abouts/{slug}', 'AboutController@index');
     Route::get('articles', 'ArticlesController@index');
     Route::get('{slug}', 'ArticlesController@show');
 });

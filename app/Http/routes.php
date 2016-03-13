@@ -21,24 +21,21 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth
     Route::post('articles/restore/{id}', 'ArticlesController@restore');
     Route::delete('articles/forceDelete/{id}', 'ArticlesController@forceDelete');
     Route::resource('articles', 'ArticlesController');
-
     Route::get('categories/index', 'CategoriesController@index');
     Route::resource('categories', 'CategoriesController');
-
     Route::get('tags/index', 'TagsController@index');
     Route::resource('tags', 'TagsController');
-
     Route::get('settings/index', 'SettingsController@index');
     Route::get('settings/user', 'SettingsController@user');
     Route::patch('settings/index', 'SettingsController@update');
-
     Route::post('uploadImage', 'ArticlesController@uploadImage');
+    Route::get('setting/flush', 'SettingsController@flush');
+    Route::get('resume/experience', 'ResumeController@experience');
+    Route::get('resume/add_experience', 'ResumeController@add_experience');
+    Route::post('resume/store_experience', 'ResumeController@store_experience');
+    Route::get('resume/project', 'ResumeController@project');
+    Route::get('resume/add_project', 'ResumeController@add_project');
 
-    Route::get('setting/flush', function () {
-        \Cache::flush();
-
-        return 'cache flush ok';
-    });
 });
 
 /*
@@ -47,34 +44,13 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth
 Route::get('login', 'Admin\AuthController@getLogin');
 Route::post('login', 'Admin\AuthController@postLogin');
 Route::get('logout', 'Admin\AuthController@logout');
-
-/*Route::controllers([
-    'auth' => 'Auth\AuthController',
-    'password' => 'Auth\PasswordController',
-]);
-*/
-
-Route::get('foo', function () {
-    \Cache::flush();
-
-    return 'ok';
-});
-
-Route::get('bar', function () {
-
-    return view('aaa');
-
-});
-
 /*
  * home
  */
 Route::group(['namespace' => 'Home'], function () {
     Route::resource('/', 'HomeController@index');
-
     Route::get('tags', 'TagsController@index');
     Route::get('tags/{slug}', 'TagsController@show');
-
     Route::get('categories', 'CategoriesController@index');
     Route::get('categories/{slug}', 'CategoriesController@show');
     Route::get('abouts', 'AboutController@index');

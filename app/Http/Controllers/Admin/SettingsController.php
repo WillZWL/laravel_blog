@@ -103,7 +103,12 @@ class SettingsController extends AdminController
     public function user()
     {
         $users = User::all();
-// var_dump($users);
         return view('admin.settings.user', compact('users'));
+    }
+
+    public function flush()
+    {
+        // /Cache::flush();
+        return redirect('admin/settings/index');
     }
 }

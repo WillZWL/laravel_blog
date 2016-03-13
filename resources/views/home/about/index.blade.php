@@ -62,7 +62,7 @@
 				      	Python, Nodejs <br/>
 				      </p>
 				      <p class="hobby">
-				      	Hobby: Coding, Coking, Reading, Bicycling, Traveling
+				      	Hobby: Coding, Cooking, Reading, Bicycling, Traveling
 				      </p>
 					  <a class="downarrow scroll" href="#about"><span></span></a>
 			      </div>

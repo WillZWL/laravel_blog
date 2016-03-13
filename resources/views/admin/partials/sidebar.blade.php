@@ -69,8 +69,18 @@
 				</ul>
 				<!-- /.nav-second-level -->
 			</li>
+			<li>
+				<a href="#"><i class="fa fa-cog fa-fw"></i>Resume Settings<span class="fa arrow"></span></a>
+				<ul class="nav nav-second-level">
+					<li>
+						<a href="/admin/resume/experience">Experience</a>
+					</li>
+					<li>
+						<a href="/admin/resume/project">Project</a>
+					</li>
+				</ul>
+			</li>
 		</ul>
 	</div>
-	<!-- /.sidebar-collapse -->
 </div>
 <!-- /.navbar-static-side -->

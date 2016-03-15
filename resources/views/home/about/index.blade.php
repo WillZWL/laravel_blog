@@ -82,6 +82,7 @@
 				 <hr>
 				 <p>毕业以后先后供职于网站外包公司，跨境电子商务企业， 参与设计开发过旅游散客管理系统， B2C电子商务系统，产品仓储管理系统，产品物流管理系统等。</p></span>
 
+				<h3><a href="/timeline">Work Experience</a></h3>
 			  <div class="years">
 				<h4><b>2012-2014</b></h4>
 				 <span><h4>友谊吧论坛， 小树林校园在线社区</h4></span>
@@ -105,7 +106,6 @@
 				 <span><h4>跨境电商</h4></span>
 				<p><i>在ThinkPHP的开源框架上，开发过B2C商城系统与SNS垂直化社区， 商城实现了多商店管理，企业页面展示， 团购， 秒杀， 招标与竞标，SNS实现了微博的发布， 评论，转发， 在项目中主要负责过商城的后台管理， 团购与秒杀功能的开发</i></p>
 			  </div>
-
 				<a class="arrow scroll" href="#skills"><span> </span></a>
 		  </div>
 	  </div>

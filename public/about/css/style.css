@@ -175,6 +175,12 @@ a.downarrow{
 .about hr {
 	width: 73%; color: #000; height: 1px; background-color:white;margin-top:10px; margin-bottom: 10px;
 }
+.about h3 {
+	margin: 1.5em 0;
+}
+.about h3 a{
+	color: #fff;
+}
 .years{
 	margin-bottom:3em;
 	color:#F1F0F0;

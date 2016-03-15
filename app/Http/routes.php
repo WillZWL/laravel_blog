@@ -56,5 +56,6 @@ Route::group(['namespace' => 'Home'], function () {
     Route::get('abouts', 'AboutController@index');
     Route::get('abouts/{slug}', 'AboutController@index');
     Route::get('articles', 'ArticlesController@index');
+    Route::get('timeline', 'TimelineController@index');
     Route::get('{slug}', 'ArticlesController@show');
 });

@@ -107,8 +107,9 @@ body input[type="text"],body input[type="submit"],body textarea,body input[type=
     font-size:2.5em;
 }
 .bannerhead p{
-    color:#F1E9F2;
+    color:#0E0E0E;
     padding-top: 10px;
+    font-weight:bolder;
 }
 
 .bannerhead .hobby{
@@ -175,7 +176,7 @@ a.downarrow{
 	width: 73%; color: #000; height: 1px; background-color:white;margin-top:10px; margin-bottom: 10px;
 }
 .years{
-	margin-bottom:4em;
+	margin-bottom:3em;
 	color:#F1F0F0;
 }
 .years p{

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="@yield('description', setting('site_description'))">
   <meta name="author" content="ganto">
-  <title>@yield('title', setting('site_name'))</title>
+  <title>@yield('title', setting('site_name')) - Will'S Timeline</title>
   <link rel="stylesheet" href="{{ cdn(elixir("css/all.css")) }}">
   <link rel="stylesheet" href="css/history.css">
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -21,7 +21,7 @@
   <div class="head">
         <div class="nav-box">
           <ul>
-              <li class="cur" style="text-align:center; font-size:62px; font-family:'微软雅黑', '宋体';">Will'S Timeline</li>
+              <li class="cur">Will'S Timeline</li>
           </ul>
         </div>
   </div>
@@ -37,7 +37,7 @@
           <h3>{{ date('m-d', strtotime($timeline->start_date)) }}<span>{{ date('Y', strtotime($timeline->start_date)) }}</span></h3>
           <dl>
             <dt>{{ $timeline->project }}
-              <span>{{ $timeline->subject }}</span>
+              <span>SBF#{{ $timeline->sbf_no}}&nbsp;&nbsp;&nbsp;&nbsp; {{ $timeline->subject }}</span>
             </dt>
           </dl>
         </li>
@@ -65,6 +65,5 @@
       });
     });
   </script>
-
 </body>
 </html>

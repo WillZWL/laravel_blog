@@ -6,15 +6,14 @@
     sideSlider();
     helpToggle();
     systole();
-    slideImg();
-    downM();
-    ExtMutual();
-    slides("#slides", ".slides");
-    skinMutual();
-    srollList("#dialog01", "11");
-    srollList("#dialog02", "6");
-    anchorLink();
-
+    // slideImg();
+    // downM();
+    // ExtMutual();
+    // slides("#slides", ".slides");
+    // skinMutual();
+    // srollList("#dialog01", "11");
+    // srollList("#dialog02", "6");
+    // anchorLink();
     var img = document.createElement("img");
     img.onload = function() {
       window.onload = function () {
@@ -142,9 +141,7 @@
           "top":_curT
         });
       });
-  }
-
-  ;
+  };
 
   function helpToggle() {
     if (!$(".help-cont dl dt a").length) {
@@ -160,9 +157,7 @@
       $(this).parent().removeAttr("style").siblings().slideUp();
       return false;
     });
-  }
-
-  ;
+  };
 
   function systole() {
     if (!$(".history").length) {
@@ -208,10 +203,5 @@
       $warpEle.parent().removeAttr("style");
       return false;
     });
-
-  }
-
-  ;
-
-
+  };
 })(jQuery);

@@ -6,9 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="@yield('description', setting('site_description'))">
   <meta name="author" content="ganto">
-
   <title>@yield('title', setting('site_name'))</title>
-
   <link rel="stylesheet" href="{{ cdn(elixir("css/all.css")) }}">
   <link rel="stylesheet" href="css/history.css">
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -16,7 +14,6 @@
     <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
-
 </head>
 <body>
   @include('home.partials.nav')
@@ -31,180 +28,23 @@
 </div>
 <div class="main">
   <div class="history">
+    @foreach ($years as $k => $year)
     <div class="history-date">
       <ul>
-        <h2 class="first"><a href="#nogo">2016</a></h2>
-        <li class="green">
-          <h3>03.13<span>2016</span></h3>
+        <h2 class="first"><a href="#nogo">{{ $k }}</a></h2>
+        @foreach ($year as $timeline)
+        <li @if ($timeline->difficulty != 'LOW') class="green" @endif>
+          <h3>{{ date('m-d', strtotime($timeline->start_date)) }}<span>{{ date('Y', strtotime($timeline->start_date)) }}</span></h3>
           <dl>
-            <dt>Flex Tool
-              <span>Upload Csv file to Our Database, and generate new report</span>
+            <dt>{{ $timeline->project }}
+              <span>{{ $timeline->subject }}</span>
             </dt>
           </dl>
         </li>
-
-        <li>
-         <h3>03.10<span>2016</span></h3>
-          <dl>
-            <dt>ValueBasket
-              <span>Adding addtional information(First leg tracking number) in Dispatch Report with HS Code</span>
-             </dt>
-          </dl>
-        </li>
-
-         <li>
-          <h3>03.08<span>2016</span></h3>
-          <dl>
-            <dt>ValueBasket
-              <span>B2C courier / upload the data to aftership</span>
-            </dt>
-          </dl>
-        </li>
-
-       <li class="green">
-          <h3>03.06<span>2016</span></h3>
-          <dl>
-            <dt>ChatandVision
-              <span>Accelerator) - Amazon EUR report format (DE, ES, FR & IT)</span>
-            </dt>
-          </dl>
-        </li>
-        <li>
-          <h3>03.01<span>2016</span></h3>
-          <dl>
-            <dt>Modify SE paypal sales reconcilization</dt>
-          </dl>
-        </li>
-        <li>
-          <h3>02.28<span>2016</span></h3>
-          <dl>
-            <dt>Modify Implement Gateway Report Tools for Amazon
-          </dt>
-          </dl>
-        </li>
-        <li class="green">
-          <h3>03.06<span>2016</span></h3>
-          <dl>
-            <dt>ChatandVision
-              <span>Accelerator) - Amazon EUR report format (DE, ES, FR & IT)</span>
-            </dt>
-          </dl>
-        </li>
-        <li>
-          <h3>03.01<span>2016</span></h3>
-          <dl>
-            <dt>Modify SE paypal sales reconcilization</dt>
-          </dl>
-        </li>
-        <li>
-          <h3>02.28<span>2016</span></h3>
-          <dl>
-            <dt>Modify Implement Gateway Report Tools for Amazon
-          </dt>
-          </dl>
-        </li>
+        @endforeach
       </ul>
     </div>
-    <div class="history-date">
-      <ul>
-        <h2 class="date02"><a href="#nogo">2015</a></h2>
-        <li class="green">
-          <h3>03.13<span>2016</span></h3>
-          <dl>
-            <dt>Flex Tool
-              <span>Upload Csv file to Our Database, and generate new report</span>
-            </dt>
-          </dl>
-        </li>
-
-        <li>
-         <h3>03.10<span>2016</span></h3>
-          <dl>
-            <dt>ValueBasket
-              <span>Adding addtional information(First leg tracking number) in Dispatch Report with HS Code</span>
-             </dt>
-          </dl>
-        </li>
-
-         <li>
-          <h3>03.08<span>2016</span></h3>
-          <dl>
-            <dt>ValueBasket
-              <span>B2C courier / upload the data to aftership</span>
-            </dt>
-          </dl>
-        </li>
-
-       <li class="green">
-          <h3>03.06<span>2016</span></h3>
-          <dl>
-            <dt>ChatandVision
-              <span>Accelerator) - Amazon EUR report format (DE, ES, FR & IT)</span>
-            </dt>
-          </dl>
-        </li>
-        <li>
-          <h3>03.01<span>2016</span></h3>
-          <dl>
-            <dt>Modify SE paypal sales reconcilization</dt>
-          </dl>
-        </li>
-        <li>
-          <h3>02.28<span>2016</span></h3>
-          <dl>
-            <dt>Modify Implement Gateway Report Tools for Amazon
-          </dt>
-          </dl>
-        </li>
-        <li class="green">
-          <h3>03.06<span>2016</span></h3>
-          <dl>
-            <dt>ChatandVision
-              <span>Accelerator) - Amazon EUR report format (DE, ES, FR & IT)</span>
-            </dt>
-          </dl>
-        </li>
-        <li>
-          <h3>03.01<span>2016</span></h3>
-          <dl>
-            <dt>Modify SE paypal sales reconcilization</dt>
-          </dl>
-        </li>
-        <li>
-          <h3>02.28<span>2016</span></h3>
-          <dl>
-            <dt>Modify Implement Gateway Report Tools for Amazon
-          </dt>
-          </dl>
-        </li>
-      </ul>
-    </div>
-    <div class="history-date">
-      <ul>
-        <h2 class="date02"><a href="#nogo">2014</a></h2>
-        <li class="green">
-          <h3>03.06<span>2016</span></h3>
-          <dl>
-            <dt>ChatandVision
-              <span>Accelerator) - Amazon EUR report format (DE, ES, FR & IT)</span>
-            </dt>
-          </dl>
-        </li>
-        <li>
-          <h3>03.01<span>2016</span></h3>
-          <dl>
-            <dt>Modify SE paypal sales reconcilization</dt>
-          </dl>
-        </li>
-        <li>
-          <h3>02.28<span>2016</span></h3>
-          <dl>
-            <dt>Modify Implement Gateway Report Tools for Amazon
-          </dt>
-          </dl>
-        </li>
-      </ul>
-    </div>
+    @endforeach
   </div>
 </div>
 <script src="js/jquery.js"></script>
@@ -216,9 +56,7 @@
     @endif
     <p><a href="#">Back to top</a></p>
   </footer>
-
   <script src="{{ cdn(elixir("js/all.js")) }}"></script>
-
   <script>
     $('.blog-post img').addClass('carousel-inner img-responsive img-rounded');
     $(document).ready(function() {

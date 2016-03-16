@@ -2,8 +2,8 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
 use Illuminate\Http\Request;
+use App\Timeline;
 
 class TimelineController extends Controller {
 
@@ -15,7 +15,13 @@ class TimelineController extends Controller {
 	public function index()
 	{
 		//
-		return view('home.timeline.index');
+		$years = [];
+		for ($i = 2016; $i >= 2014; $i--) {
+			$timelines = Timeline::where(\DB::raw('YEAR(start_date)'), '=', $i)->orderby('start_date', 'desc')->get();
+			$years[$i] = $timelines;
+		}
+		// dd($years);
+		return view('home.timeline.index',compact('years'));
 	}
 
 	/**

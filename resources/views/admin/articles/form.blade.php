@@ -1,11 +1,24 @@
+@include('UEditor::head')
 <div class="form-group">
 	{!! Form::label('title', 'Title:') !!}
 	{!! Form::text('title', null, ['class' => 'form-control', 'autofocus' => 'autofocus']) !!}
 </div>
 
 <div class="form-group">
-	{!! Form::label('body', 'Body:') !!}
-	{!! Form::textarea('body', null, ['id' => 'editor', 'class' => 'form-control', 'placeholder' => 'Please Enter some text...',  'style' => 'overflow-x:hidden', 'rows' => '22']) !!}
+	{!! Form::label('body', 'Content:') !!}
+<!-- 	{!! Form::textarea('body', null, ['id' => 'editor', 'class' => 'form-control', 'placeholder' => 'Please Enter some text...',  'style' => 'overflow-x:hidden', 'rows' => '22']) !!} -->
+	<script id="container" name="body" type="text/plain">
+	    文章内容
+	</script>
+	<!-- 加载编辑器的容器 -->
+
+	<!-- 实例化编辑器 -->
+	<script type="text/javascript">
+	    var ue = UE.getEditor('container');
+	        ue.ready(function() {
+	        ue.execCommand('serverparam', '_token', '{{ csrf_token() }}');//此处为支持laravel5 csrf ,根据实际情况修改,目的就是设置 _token 值.
+	    });
+	</script>
 </div>
 
 <div class="form-group">
@@ -68,7 +81,6 @@
 	<!-- inline-attachment -->
 	<script src="/admin-assets/js/inline-attachment.js"></script>
 	<script src="/admin-assets/js/jquery.inline-attachment.js"></script>
-
 	<!-- select2 -->
 	<script src="/admin-assets/js/select2.min.js"></script>
 	<script>

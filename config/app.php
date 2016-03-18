@@ -136,7 +136,6 @@ return [
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Html\HtmlServiceProvider',
-
 		'Barryvdh\Debugbar\ServiceProvider',
 
 		/*
@@ -148,10 +147,10 @@ return [
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
 		'App\Providers\ViewComposerServiceProvider',
-
 		'Laracasts\Flash\FlashServiceProvider',
 		'GrahamCampbell\HTMLMin\HTMLMinServiceProvider',
 		'Roumen\Sitemap\SitemapServiceProvider',
+		'Stevenyangecho\UEditor\UEditorServiceProvider',
 
 	],
 

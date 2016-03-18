@@ -36,6 +36,12 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth
     Route::get('resume/project', 'ResumeController@project');
     Route::get('resume/add_project', 'ResumeController@add_project');
 
+    Route::get('upload', 'UploadController@index');
+    Route::post('upload/file', 'UploadController@uploadFile');
+    Route::delete('upload/file', 'UploadController@deleteFile');
+    Route::post('upload/folder', 'UploadController@createFolder');
+    Route::delete('upload/folder', 'UploadController@deleteFolder');
+
 });
 
 /*

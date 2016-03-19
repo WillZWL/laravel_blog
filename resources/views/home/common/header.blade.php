@@ -10,7 +10,7 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- <link href='http://fonts.useso.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'> -->
-<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/history.css">
 <script src="js/jquery.min.js"></script>
 <link rel="stylesheet" href="css/swipebox.css">
  <!------ Light Box ------>
@@ -21,7 +21,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		});
 	</script>
     <!------ Eng Light Box ------>
-	 <script src="js/responsiveslides.min.js"></script>
+	<script src="js/responsiveslides.min.js"></script>
 	<script>
     $(function () {
       $("#slider").responsiveSlides({
@@ -46,12 +46,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="head-nav">
 					<span class="menu"> </span>
 						<ul class="cl-effect-3">
-							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="blog.html">Blog</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="gallery.html">Gallery</a></li>
-							<li><a href="contact.html">Contact</a></li>
-								<div class="clearfix"></div>
+							<li class="active"><a href="/">Home</a></li>
+							<li><a href="blogs">Blog</a></li>
+							<li><a href="abouts">About</a></li>
+							<li><a href="gallerys">Gallery</a></li>
+							<li><a href="contact">Contact</a></li>
+							<div class="clearfix"></div>
 						</ul>
 				</div>
 				<!-- script-for-nav -->

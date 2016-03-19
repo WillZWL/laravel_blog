@@ -35,7 +35,6 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth
     Route::post('resume/store_experience', 'ResumeController@store_experience');
     Route::get('resume/project', 'ResumeController@project');
     Route::get('resume/add_project', 'ResumeController@add_project');
-
     Route::get('upload', 'UploadController@index');
     Route::post('upload/file', 'UploadController@uploadFile');
     Route::delete('upload/file', 'UploadController@deleteFile');
@@ -61,7 +60,9 @@ Route::group(['namespace' => 'Home'], function () {
     Route::get('categories/{slug}', 'CategoriesController@show');
     Route::get('abouts', 'AboutController@index');
     Route::get('abouts/{slug}', 'AboutController@index');
-    Route::get('articles', 'ArticlesController@index');
+    Route::get('blogs', 'ArticlesController@index');
     Route::get('timeline', 'TimelineController@index');
+    Route::get('contact', 'ContactsController@index');
+    Route::get('gallerys', 'GallerysController@index');
     Route::get('{slug}', 'ArticlesController@show');
 });

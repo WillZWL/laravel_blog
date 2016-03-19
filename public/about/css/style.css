@@ -5,7 +5,7 @@
 	License URL: http://creativecommons.org/licenses/by/3.0/
 ---*/
 html,body{
-	font-family: 'Lato', sans-serif;
+	font-family: '微软雅黑', sans-serif;
 }
 .clear{
 	clear:both;
@@ -28,7 +28,7 @@ body input[type="text"],body input[type="submit"],body textarea,body input[type=
 	background-size:cover;
 }
 /*------ HEADER STARTS---------*/
-.header{
+.about_header{
 	background:rgba(0, 0, 0, 0.24);
 }
 /*------ CONTAINER STARTS---------*/
@@ -36,15 +36,15 @@ body input[type="text"],body input[type="submit"],body textarea,body input[type=
 	width:70%;
 }
 /*------ LOGO STARTS---------*/
-.logo{
+.about_logo{
 	float:left;
 	margin:0.5em 0 0.5em 0em;
 }
-.logo a{
+.about_logo a{
 	color:#B5A9B7;
 	font-size:1.9em;
 }
-.logo a:hover{
+.about_logo a:hover{
 	color:#B5A9B7;
     text-decoration:none;
 }

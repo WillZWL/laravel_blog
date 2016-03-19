@@ -5,6 +5,7 @@
 	<script src="/about/js/jquery.min.js"> </script>
 	<link href="/about/css/bootstrap.css" rel='stylesheet' type='text/css' />
 	<link href="/about/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<!-- <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -23,7 +24,7 @@
 </head>
 <body>
  <div id="top-top" class="headerbg">
-	   <div class="header">
+	   <div class="about_header">
 			<div class="nav lang">
 				<ul>
 					<li><a class="" href="zh-cn">zh-cn</a></li>
@@ -32,7 +33,7 @@
 				</ul>
 			</div>
 			<div class="container">
-				   <div class="logo">
+				   <div class="about_logo">
 						<a href="/">{{ trans('about.hello')}}</a>
 				   </div>
 				  <div class="nav">
@@ -86,25 +87,25 @@
 			  <div class="years">
 				<h4><b>2012-2014</b></h4>
 				 <span><h4>友谊吧论坛， 小树林校园在线社区</h4></span>
-				 <p><i>在线期间曾Discuz搭建一个关于友谊的论坛社区，独立完成网站前期的策划，建设，运营维护， 后来又基于ThinkSNS 二次开发过一个校园社区。在这两个校园项目中， 积累并且熟悉了网站开发的基本过程，熟悉了MVC的网站开发过程，能对流行的开源系统机型简单的二次开发与定制。</i></p>
+				 <p>在线期间曾Discuz搭建一个关于友谊的论坛社区，独立完成网站前期的策划，建设，运营维护， 后来又基于ThinkSNS 二次开发过一个校园社区。在这两个校园项目中， 积累并且熟悉了网站开发的基本过程，熟悉了MVC的网站开发过程，能对流行的开源系统机型简单的二次开发与定制。</p>
 			  </div>
 
 			  <div class="years">
 				 <h4><b>2013-2014</b></h4>
 				 <span><h4>散客管理系统</h4></span>
-				 <p><i>根据客户的业务要求， 设计并开发了一套旅游相关的散客管理信息系统，能够处理客户公司的财务，销售， 计调，地接， 统计等部门之间的协调工作， 提高了公司的业务处理效率。在项目中主要负责了需求文档的整理与编写，项目后台程序的设计开发。</i></p>
+				 <p>根据客户的业务要求， 设计并开发了一套旅游相关的散客管理信息系统，能够处理客户公司的财务，销售， 计调，地接， 统计等部门之间的协调工作， 提高了公司的业务处理效率。在项目中主要负责了需求文档的整理与编写，项目后台程序的设计开发。</p>
 			  </div>
 
 			   <div class="years">
 				 <h4><b>2014</b></h4>
 				 <span><h4>商城＋SNS系统开发</h4></span>
-				<p><i>在ThinkPHP的开源框架上，开发过B2C商城系统与SNS垂直化社区， 商城实现了多商店管理，企业页面展示， 团购， 秒杀， 招标与竞标，SNS实现了微博的发布， 评论，转发， 在项目中主要负责过商城的后台管理， 团购与秒杀功能的开发</i></p>
+				<p>在ThinkPHP的开源框架上，开发过B2C商城系统与SNS垂直化社区， 商城实现了多商店管理，企业页面展示， 团购， 秒杀， 招标与竞标，SNS实现了微博的发布， 评论，转发， 在项目中主要负责过商城的后台管理， 团购与秒杀功能的开发</p>
 			  </div>
 
 			  <div class="years">
 				 <h4><b>2014－至今</b></h4>
 				 <span><h4>跨境电商</h4></span>
-				<p><i>在ThinkPHP的开源框架上，开发过B2C商城系统与SNS垂直化社区， 商城实现了多商店管理，企业页面展示， 团购， 秒杀， 招标与竞标，SNS实现了微博的发布， 评论，转发， 在项目中主要负责过商城的后台管理， 团购与秒杀功能的开发</i></p>
+				<p>在ThinkPHP的开源框架上，开发过B2C商城系统与SNS垂直化社区， 商城实现了多商店管理，企业页面展示， 团购， 秒杀， 招标与竞标，SNS实现了微博的发布， 评论，转发， 在项目中主要负责过商城的后台管理， 团购与秒杀功能的开发</p>
 			  </div>
 				<a class="arrow scroll" href="#skills"><span> </span></a>
 		  </div>
@@ -218,49 +219,4 @@
 			  </div>
 		</div>
   </div>
-
-  <div  id="contact" class="footer">
-      <div class="container">
-
-		   <div class="contact-section text-center">
-			  <h2><span> </span>CONTACT<span> </span></h2>
-		  </div>
-		 <div class="row">
-
-			 <div class="col-md-6">
-				  <div class="footer-left">
-<!-- 						<div class="social-icons">
-						   <a href="#"><img src="/about/images/in.png"></a>
-						   <a href="#"><img src="/about/images/twt.png"></a>
-						   <a href="#"><img src="/about/images/fb.png"></a>
-					   </div> -->
-					   <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-					   quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh
-					   id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
-					   Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a
-					   ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.</p>
-				  </div>
-			 </div>
-
-			  <div class="col-md-6">
-				  <div class="footer-right">
-				 <div class="form">
-				 <form>
-					 <input type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
-					 <input type="text" class="text" value="E-mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-mail';}">
-					 <textarea rows="2" cols="70" onfocus="if(this.value == 'Your Message') this.value='';" onblur="if(this.value == '') this.value='Your Message';" >Your Message</textarea>
-					 <div class="clear"> </div>
-					 <input type="submit" value="SEND">
-				 </form>
-				 </div>
-				  </div>
-				  <div class="clear"></div>
-				  <p class="copy-right">Template by <a href="http://w3layouts.com/">W3layouts</a></p>
-			  </div>
-		 </div>
-	 </div>
-	 <a class="up scroll" href="#top-top"><span> </span></a>
- </div>
- </body>
- </html>
-
+@include('home.common.footer')

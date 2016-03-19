@@ -9,9 +9,3 @@
 
 <!-- Custom Fonts -->
 <link href="/admin-assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<style>
-.page .pagination{
-	margin-top: 0px;
-	margin-bottom: 0px;
-}
-</style>

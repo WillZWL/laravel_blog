@@ -47,7 +47,7 @@
 		</div>
 		<div class="clearfix"></div>
 		<div class="bottom">
-			<p>Copyright &copy; 2015.Company name All rights reserved.<a target="_blank" href="http://www.cssmoban.com/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+			<p>Copyright &copy; 2015.Company name All rights reserved.<a target="_blank" href="">Laravel</a></p>
 		</div>
 	</div>
 </div>

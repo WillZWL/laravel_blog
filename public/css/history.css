@@ -10,7 +10,7 @@ a:hover { text-decoration:underline; }
 .fl { float:left;}
 .fr { float:right;}
 /*.public*/
-.main {margin:0 auto; width:980px;min-height:720px;padding-bottom:50px;}
+.history_main {margin:0 auto; width:980px;min-height:720px;padding-bottom:50px;}
 a { blr:expression(this.onFocus=this.blur()) }
 a { outline:none; }
 li.cur { text-align:center; font-size:62px; font-family:'微软雅黑', '宋体';}

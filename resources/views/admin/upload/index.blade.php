@@ -92,10 +92,8 @@
                         </td>
                     </tr>
                 @endforeach
-
                 </tbody>
             </table>
-
         </div>
     </div>
 </div>
@@ -104,7 +102,6 @@
 
 @stop
 
-@section('scripts')
 <script>
 
     // 确认文件删除
@@ -132,4 +129,3 @@
         $("#uploads-table").DataTable();
     });
 </script>
-@stop

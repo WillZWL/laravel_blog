@@ -26,6 +26,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth
 
     //categories
     Route::get('categories/index', 'CategoriesController@index');
+    Route::delete('categories/delete/{id}', 'CategoriesController@destroy');
     Route::resource('categories', 'CategoriesController');
 
     //tags

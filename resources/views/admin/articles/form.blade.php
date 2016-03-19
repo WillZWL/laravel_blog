@@ -6,12 +6,10 @@
 
 <div class="form-group">
 	{!! Form::label('body', 'Content:') !!}
-<!-- 	{!! Form::textarea('body', null, ['id' => 'editor', 'class' => 'form-control', 'placeholder' => 'Please Enter some text...',  'style' => 'overflow-x:hidden', 'rows' => '22']) !!} -->
 	<script id="container" name="body" type="text/plain">
-	    文章内容
+	    {!! $article->body or 'Input your blog content' !!}
 	</script>
 	<!-- 加载编辑器的容器 -->
-
 	<!-- 实例化编辑器 -->
 	<script type="text/javascript">
 	    var ue = UE.getEditor('container');
@@ -61,6 +59,11 @@
 <div class="form-group">
 	{!! Form::label('original', 'Original:') !!}
 	{!! Form::text('original', null, ['class' => 'form-control']) !!}
+</div>
+
+<div class="form-group">
+	{!! Form::label('image', 'Image:') !!}
+	<input type="file" name='image' class="filestyle" data-buttonText="Choose file">
 </div>
 
 <div class="form-group">

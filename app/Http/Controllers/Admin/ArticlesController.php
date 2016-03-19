@@ -93,11 +93,11 @@ class ArticlesController extends AdminController
     public function update(ArticleRequest $request, $id)
     {
         $article = Article::findOrFail($id);
-
-        $article->update($request->all());
-
+        $filePath = $this->uploadImage($request);
+        $request_data = $request->all();
+        $request_data['image'] = $filePath;
+        $article->update($request_data);
         $this->syncTags($article, $request->input('tag_list'));
-
         return redirect('admin/articles/index');
     }
 
@@ -150,30 +150,29 @@ class ArticlesController extends AdminController
 
     public function createArticle(ArticleRequest $request)
     {
-        $article = \Auth::user()->articles()->create($request->all());
-
+        $filePath = $this->uploadImage($request);
+        $request_data = $request->all();
+        $request_data['image'] = $filePath;
+        $article = \Auth::user()->articles()->create($request_data);
         $this->syncTags($article, $request->input('tag_list'));
     }
 
     public function uploadImage()
     {
-        if ($file = \Request::file('file')) {
+        if ($file = \Request::file('image')) {
             $allowed_extensions = ["png", "jpg", "gif"];
             if ($file->getClientOriginalExtension() && !in_array($file->getClientOriginalExtension(), $allowed_extensions)) {
                 return ['error' => 'You may only upload png, jpg or gif.'];
             }
-
             $fileName        = $file->getClientOriginalName();
             $extension       = $file->getClientOriginalExtension() ?: 'png';
-            $folderName      = '/uploads/images/'.date('Y', time()).'/';
+            $folderName      = '/uploads/images/'.date('Y').'/'.date('m').'/';
             $destinationPath = public_path().$folderName;
             $safeName        = uniqid().'.'.$extension;
             $file->move($destinationPath, $safeName);
-
             $filePath = $folderName.$safeName;
             $cdnPath = cdn($filePath);
-
-            return ['filename'  => $cdnPath];
+            return $cdnPath;
         } else {
             return ['error' => 'Error while uploading file'];
         }

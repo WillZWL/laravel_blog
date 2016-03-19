@@ -107,8 +107,8 @@ class CategoriesController extends AdminController
      */
     public function destroy($id)
     {
-        Category::find($id)->delete();
-
+        Category::where('id', '=', $id)->delete();
+        \Cache::tags('categories')->flush();
         return redirect('admin/categories/index');
     }
 }

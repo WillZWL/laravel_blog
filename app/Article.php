@@ -12,7 +12,7 @@ class Article extends Model
 
     protected $appends = ['tag_list', 'body_html'];
 
-    protected $fillable = ['title', 'body', 'slug', 'click', 'user_id', 'category_id', 'original', 'created_at'];
+    protected $fillable = ['title', 'body', 'slug', 'click', 'user_id', 'category_id', 'original', 'image', 'created_at'];
 
     public function user()
     {

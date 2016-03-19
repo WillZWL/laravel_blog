@@ -102,8 +102,20 @@ class SettingsController extends AdminController
 
     public function user()
     {
-        $users = User::all();
+        $users = User::latest()->paginate(15);
         return view('admin.settings.user', compact('users'));
+    }
+
+    public function user_edit($id)
+    {
+        $user = User::findOrFail($id);
+        $users = \App\User::lists('username', 'id', 'email');
+        return view('admin.settings.user_edit', compact('user', 'users'));
+    }
+
+    public function user_update()
+    {
+
     }
 
     public function flush()

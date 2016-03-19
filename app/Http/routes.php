@@ -16,25 +16,41 @@
  */
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth'], function () {
     Route::get('index', 'AdminController@index');
+
+    //articles
     Route::get('articles/index', 'ArticlesController@index');
     Route::get('articles/trash', 'ArticlesController@trash');
     Route::post('articles/restore/{id}', 'ArticlesController@restore');
     Route::delete('articles/forceDelete/{id}', 'ArticlesController@forceDelete');
     Route::resource('articles', 'ArticlesController');
+
+    //categories
     Route::get('categories/index', 'CategoriesController@index');
     Route::resource('categories', 'CategoriesController');
+
+    //tags
     Route::get('tags/index', 'TagsController@index');
     Route::resource('tags', 'TagsController');
+
+    //setting
     Route::get('settings/index', 'SettingsController@index');
     Route::get('settings/user', 'SettingsController@user');
     Route::patch('settings/index', 'SettingsController@update');
+    Route::get('setting/user_edit/{id}', 'SettingsController@user_edit');
+    Route::resource('settings', 'SettingsController@user_update');
+
+    //upload
     Route::post('uploadImage', 'ArticlesController@uploadImage');
     Route::get('setting/flush', 'SettingsController@flush');
+
+    //resume
     Route::get('resume/experience', 'ResumeController@experience');
     Route::get('resume/add_experience', 'ResumeController@add_experience');
     Route::post('resume/store_experience', 'ResumeController@store_experience');
     Route::get('resume/project', 'ResumeController@project');
     Route::get('resume/add_project', 'ResumeController@add_project');
+
+    //upload
     Route::get('upload', 'UploadController@index');
     Route::post('upload/file', 'UploadController@uploadFile');
     Route::delete('upload/file', 'UploadController@deleteFile');

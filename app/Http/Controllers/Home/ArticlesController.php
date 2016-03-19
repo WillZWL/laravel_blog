@@ -13,9 +13,7 @@ class ArticlesController extends Controller
     public function index()
     {
         $page_size = setting('page_size');
-
         $articles = Article::with('tags', 'category')->latest()->paginate($page_size);
-
         return view('home.articles.index', compact('articles'));
     }
 
@@ -28,8 +26,11 @@ class ArticlesController extends Controller
      */
     public function show($slug)
     {
-        $article = Article::findBySlug($slug);
-
-        return view('home.articles.show', compact('article'));
+        try {
+            $article = Article::findBySlug($slug);
+            return view('home.articles.show', compact('article'));
+        } catch (\Exception $e) {
+            return redirect('./404.html');
+        }
     }
 }

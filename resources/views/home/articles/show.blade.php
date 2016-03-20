@@ -1,5 +1,4 @@
 @extends('home.layout')
-
 @section('content')
 <div class="main">
 		<div class="container">
@@ -8,8 +7,8 @@
 					<div class="col-md-9 cont span_2_of_3">
 					  	<div class="blog_grid">
 				  	   	   <h2 class="post_title">{{ $article->title }}</h2>
-				  	   	   <a href="single.html"><img src="images/img10.jpg" class="img-responsive" alt="" /></a>
-				  	   	   <p>{!! $article->body !!}</p>
+				  	   	   <img src="{{ $article->image }}" class="img-responsive" alt="{{ $article->title }}" style="width: 820px;height: 450px;" />
+				  	   	   <p>{!! str_replace('background-color: rgb(255, 255, 255);','',$article->body) !!}</p>
 				  	        <!-- 多说评论框 start -->
 							<div class="ds-thread" data-thread-key="{{ $article->slug }}" data-title="{{ $article->title }}" data-url="{{ setting('site_url').$article->slug }}"></div>
 							<!-- 多说评论框 end -->

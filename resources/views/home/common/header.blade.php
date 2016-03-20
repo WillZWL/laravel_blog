@@ -32,6 +32,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         pager: true,
       });
     });
+
+    $(document).ready(function(){
+        @if (Request::getRequestUri() == '/')
+            $("#home").addClass('active');
+        @else
+            $("#{{ str_replace('/', '', Request::getRequestUri()) }}").addClass('active');
+        @endif;
+    });
   </script>
 
 </head>
@@ -44,24 +52,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div> -->
 			<div class="header-bottom">
 				<div class="head-nav">
-					<span class="menu"> </span>
+					<span class="menu">
 						<ul class="cl-effect-3">
-							<li class="active"><a href="/">Home</a></li>
-							<li><a href="blogs">Blog</a></li>
-							<li><a href="abouts">About</a></li>
-							<li><a href="gallerys">Gallery</a></li>
-							<li><a href="contact">Contact</a></li>
+							<li id='home'><a href="/">Home</a></li>
+							<li id="blogs"><a href="blogs">Blog</a></li>
+                            <li id="gallerys"><a href="gallerys">Gallery</a></li>
+                            <li id="contact"><a href="contact">Contact</a></li>
+							<li><a href="abouts" target="__blank">About</a></li>
 							<div class="clearfix"></div>
 						</ul>
+                    </span>
 				</div>
 				<!-- script-for-nav -->
-					<script>
+	<!-- 				<script>
 						$( "span.menu" ).click(function() {
 						  $( ".head-nav ul" ).slideToggle(300, function() {
 							// Animation complete.
 						  });
 						});
-					</script>
+					</script> -->
 				<!-- script-for-nav -->
 				<div class="search2">
 					<form>

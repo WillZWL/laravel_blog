@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Controller;
 use App\Article;
+use App\Category;
+use App\Tag;
 
 class ArticlesController extends Controller
 {
@@ -14,7 +16,10 @@ class ArticlesController extends Controller
     {
         $page_size = setting('page_size');
         $articles = Article::with('tags', 'category')->latest()->paginate($page_size);
-        return view('home.articles.index', compact('articles'));
+        $categories = Category::getSortedCategories();
+        $tags = Tag::all();
+        // var_dump($categories);
+        return view('home.articles.index', compact('articles', 'categories', 'tags'));
     }
 
     /**
@@ -28,7 +33,9 @@ class ArticlesController extends Controller
     {
         try {
             $article = Article::findBySlug($slug);
-            return view('home.articles.show', compact('article'));
+            $categories = Category::getSortedCategories();
+            $tags = Tag::all();
+            return view('home.articles.show', compact('article', 'categories', 'tags'));
         } catch (\Exception $e) {
             return redirect('./404.html');
         }

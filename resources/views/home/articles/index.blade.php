@@ -5,34 +5,15 @@
 			<div class="content">
 		 		<div class="section group">
 					<div class="col-md-9 cont span_2_of_3">
-						<div class="blog_grid">
-							<h2 class="post_title"><a href="single.html">Blandit praesent luptatum</a></h2>
-							<a href="single.html"><img src="images/img10.jpg" class="img-responsive" alt="" /></a>
-							<p>Aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse mole</p>
-								<div class="button1"><a class="more" href="single.html">Read More</a></div>
-							<ul class="links">
-								<li><i class="date"> </i><span class="icon_text">July 14, 2014</span></li>
-								<li><a href="#"><i class="admin"> </i><span class="icon_text">Admin</span></a></li>
-								<li class="last"><a href="#"><i class="permalink"> </i><span class="icon_text">Permalink</span></a></li>
-							</ul>
-							<ul class="links_middle">
-								<li><a href="#"><i class="title-icon"> </i><span class="icon_text">Lorem Ipsum Dolore</span></a></li>
-								<li><i class="tags"> </i><span class="icon_text">No tags</span></li>
-							</ul>
-							<ul class="links_bottom">
-								<li><a href="#"><i class="comments"> </i><span class="icon_text">5 Comments</span></a></li>
-								<li><i class="views"> </i><span class="icon_text">49</span></li>
-								<li><i class="likes"> </i><span class="icon_text">12</span></li>
-							</ul>
-						</div>
-						<div class="blog_grid">
-							<h2 class="post_title"><a href="single.html">Blandit praesent luptatum</a></h2>
-							<a href="single.html"><img src="images/img12.jpg" class="img-responsive" alt="" /></a>
-							<p>Aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse mole</p>
-							<div class="button1"><a class="more" href="single.html">Read More</a></div>
 
+						@foreach ($articles as $k => $article)
+						<div class="blog_grid">
+							<h2 class="post_title"><a href="{{ $article->slug }}">{{ $article->title }}</a></h2>
+							<a href="{{ $article->slug }}" class="blog_list_img"><img src="{{ $article->image }}" class="img-responsive" alt="{{ $article->title }}" style="width: 820px;height: 450px;" /></a>
+							<p>{!! mb_substr(str_replace('&nbsp;', '', strip_tags($article->body)), 0, 200) !!}</p>
+							<div class="button1"><a class="more" href="{{ $article->slug }}">Read More</a></div>
 							<!-- 多说评论框 start -->
-							<div class="ds-thread" data-thread-key="" data-title="" data-url=""></div>
+							<div class="ds-thread" data-thread-key="{{ $article->slug }}" data-title="{{ $article->title }}" data-url="{{ setting('site_url').$article->slug }}"></div>
 							<!-- 多说评论框 end -->
 							<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 							<script type="text/javascript">
@@ -48,6 +29,8 @@
 							</script>
 							<!-- 多说公共JS代码 end -->
 						</div>
+						@endforeach
+
 						<div class="pagination pagination__posts">
 							<ul>
 								<li class="first"><a href="#">First</a></li>

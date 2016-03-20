@@ -95,7 +95,9 @@ class ArticlesController extends AdminController
         $article = Article::findOrFail($id);
         $filePath = $this->uploadImage($request);
         $request_data = $request->all();
-        $request_data['image'] = $filePath;
+        if ($filePath) {
+            $request_data['image'] = $filePath;
+        }
         $article->update($request_data);
         $this->syncTags($article, $request->input('tag_list'));
         return redirect('admin/articles/index');
@@ -152,7 +154,9 @@ class ArticlesController extends AdminController
     {
         $filePath = $this->uploadImage($request);
         $request_data = $request->all();
-        $request_data['image'] = $filePath;
+        if ($filePath) {
+            $request_data['image'] = $filePath;
+        }
         $article = \Auth::user()->articles()->create($request_data);
         $this->syncTags($article, $request->input('tag_list'));
     }
@@ -160,7 +164,7 @@ class ArticlesController extends AdminController
     public function uploadImage()
     {
         if ($file = \Request::file('image')) {
-            $allowed_extensions = ["png", "jpg", "gif"];
+            $allowed_extensions = ["png", "jpg", "gif", 'jpeg'];
             if ($file->getClientOriginalExtension() && !in_array($file->getClientOriginalExtension(), $allowed_extensions)) {
                 return ['error' => 'You may only upload png, jpg or gif.'];
             }
@@ -173,8 +177,6 @@ class ArticlesController extends AdminController
             $filePath = $folderName.$safeName;
             $cdnPath = cdn($filePath);
             return $cdnPath;
-        } else {
-            return ['error' => 'Error while uploading file'];
         }
     }
 }

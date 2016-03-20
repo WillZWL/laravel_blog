@@ -4,10 +4,11 @@ h1, h2, h3 {margin-top: 0;}
 ul, ol {margin: 0;}
 p {margin: 0;}
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Microsoft YaHei','微软雅黑', sans-serif;
+  color: #666;
   }
 body{
-	background:url(../images/back.png) no-repeat center fixed;
+	background:#f2f2f2;
 	background-size: cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
@@ -346,9 +347,9 @@ ul.callbacks_tabs.callbacks1_tabs {
 	margin: 0;
 	font-style: italic;
 }
-span {
+/*span {
 	color: #d4a258;
-}
+}*/
 h5 span {
 	font-style: italic;
 }
@@ -771,9 +772,9 @@ h2.post_title a:hover{
 	color:#898989;
 }
 .blog_grid p {
-	font-size: 0.9em;
+	font-size: 1.2em;
 	line-height: 1.8em;
-	color: #141414;
+	/*color: #141414;*/
 	padding-top: 1.2em;
 }
 ul.links{
@@ -1430,6 +1431,10 @@ h2.post_title {
 }
 .blog_grid p {
 	font-size: 0.875em;
+}
+.blog_list_img img{
+	width: 820px;
+	width: 450px;
 }
 .main h3 {
 	font-size: 1.3em;

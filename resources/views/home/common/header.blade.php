@@ -16,18 +16,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
  <!------ Light Box ------>
     <script src="js/jquery.swipebox.min.js"></script>
     <script type="text/javascript">
-		jQuery(function($) {
-			$(".swipebox").swipebox();
-		});
-	</script>
+        jQuery(function($) {
+            $(".swipebox").swipebox();
+        });
+    </script>
     <!------ Eng Light Box ------>
-	<script src="js/responsiveslides.min.js"></script>
-	<script>
+    <script src="js/responsiveslides.min.js"></script>
+    <script>
     $(function () {
       $("#slider").responsiveSlides({
-      	auto: true,
-      	nav: true,
-      	speed: 500,
+        auto: true,
+        nav: true,
+        speed: 500,
         namespace: "callbacks",
         pager: true,
       });
@@ -58,7 +58,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li id="blogs"><a href="blogs">Blog</a></li>
                             <li id="gallerys"><a href="gallerys">Gallery</a></li>
                             <li id="contact"><a href="contact">Contact</a></li>
-							<li><a href="abouts" target="__blank">About</a></li>
+							<li><a href="abouts" target="_blank">About</a></li>
 							<div class="clearfix"></div>
 						</ul>
                     </span>

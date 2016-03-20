@@ -6,42 +6,14 @@
 			<div class="slider">
 				<div class="callbacks_container">
 					<ul class="rslides" id="slider">
+						@foreach ($articles as $k => $article)
 						<li>
-							<img src="images/img18.jpg" class="img-responsive" alt="">
+							<a href="{{ $article->slug }}"><img src="{{ $article->image }}" class="img-responsive" alt="{{ $article->title }}"></a>
 							<div class="caption">
-								<p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.</p>
+								<p>{!! mb_substr(str_replace('&nbsp;', '', strip_tags($article->body)), 0, 200) !!}</p>
 							</div>
 						</li>
-						<li>
-							<img src="images/img15.jpg" class="img-responsive" alt="">
-							<div class="caption">
-								<p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.</p>
-							</div>
-						</li>
-						<li>
-							<img src="images/img17.jpg" class="img-responsive" alt="">
-							<div class="caption">
-								<p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.</p>
-							</div>
-						</li>
-						<li>
-							<img src="images/img18.jpg" class="img-responsive" alt="">
-							<div class="caption">
-								<p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.</p>
-							</div>
-						</li>
-						<li>
-							<img src="images/img15.jpg" class="img-responsive" alt="">
-							<div class="caption">
-								<p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.</p>
-							</div>
-						</li>
-						<li>
-							<img src="images/img17.jpg" class="img-responsive" alt="">
-							<div class="caption">
-								<p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.</p>
-							</div>
-						</li>
+						@endforeach
 					</ul>
 				</div>
 			</div>
@@ -63,56 +35,56 @@
 				<div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
 					<div class="portfolio-wrapper grid_box">
 						<div class="welcome-1">
-							<a href="images/img18.jpg" class="swipebox"  title="Image Title"> <img src="images/img18.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+							<a href="images/img01.jpg" class="swipebox"  title="Image Title"> <img src="images/img01.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 						</div>
 					</div>
 	            </div>
 				<div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
 					<div class="portfolio-wrapper grid_box">
 						<div class="welcome-1">
-							<a href="images/img13.jpg" class="swipebox"  title="Image Title"> <img src="images/img13.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+							<a href="images/img02.jpg" class="swipebox"  title="Image Title"> <img src="images/img02.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 						</div>
 					 </div>
 				</div>
 				<div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
 					<div class="portfolio-wrapper grid_box">
 						<div class="welcome-1">
-							<a href="images/img14.jpg" class="swipebox"  title="Image Title"> <img src="images/img14.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+							<a href="images/im03.jpg" class="swipebox"  title="Image Title"> <img src="images/img03.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 						</div>
 					 </div>
 				</div>
 				<div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
 					<div class="portfolio-wrapper grid_box">
 						<div class="welcome-1">
-							<a href="images/img15.jpg" class="swipebox"  title="Image Title"> <img src="images/img15.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+							<a href="images/img04.jpg" class="swipebox"  title="Image Title"> <img src="images/img04.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 						</div>
 					 </div>
 				</div>
 				<div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
 					<div class="portfolio-wrapper grid_box">
 						<div class="welcome-1">
-							<a href="images/img16.jpg" class="swipebox"  title="Image Title"> <img src="images/img16.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+							<a href="images/img05.jpg" class="swipebox"  title="Image Title"> <img src="images/img05.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 						</div>
 					 </div>
 				</div>
 				<div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
 					<div class="portfolio-wrapper grid_box">
 						<div class="welcome-1">
-							<a href="images/img17.jpg" class="swipebox"  title="Image Title"> <img src="images/img17.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+							<a href="images/img06.jpg" class="swipebox"  title="Image Title"> <img src="images/img06.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 						</div>
 					 </div>
 				</div>
 				<div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
 					<div class="portfolio-wrapper grid_box">
 						<div class="welcome-1">
-							<a href="images/img12.jpg" class="swipebox"  title="Image Title"> <img src="images/img12.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+							<a href="images/img07.jpg" class="swipebox"  title="Image Title"> <img src="images/img07.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 						</div>
 					 </div>
 				</div>
 				<div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
 					<div class="portfolio-wrapper grid_box">
 						<div class="welcome-1">
-							<a href="images/img10.jpg" class="swipebox"  title="Image Title"> <img src="images/img10.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+							<a href="images/img08.jpg" class="swipebox"  title="Image Title"> <img src="images/img08.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 						</div>
 					 </div>
 				</div>
@@ -161,45 +133,30 @@
 <div class="more-recent">
 	<div class="container">
 		<div class="col-md-6 more-left">
-			<h3><span>More</span> About Author</h3>
-			<p>Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Aliquam erat ac ipsum. Integer aliquam purus. </p>
-			<p>Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum sapien massa ac turpis faucibus orci luctus non, consectetuer lobortis quis, varius in, purus. Integer ultrices posuere cubilia. </p>
-			<p>Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum  justo vel bibendum sapien massa ac adipiscing wisi. Aliquam erat ac ipsum.justo vel bibendum sapien massa ac turpis faucibus orci luctus non. Integer aliquam purus. </p>
-			<div class="button"><a class="more" href="single.html">Read More</a></div>
+			<h3><span><a href="/abouts">More About Author</a></span></h3>
+			<p>2014年毕业于武汉大学东湖分校管理学院，电子商务专业，主要研究于电子商务网站的分析建设，在校曾建设开发过多种类型的电子商务网站，具有一定的互联网产品的建设开发经验</p>
+			<p>毕业以后先后供职于网站外包公司，跨境电子商务企业， 参与设计开发过旅游散客管理系统， B2C电子商务系统，产品仓储管理系统，产品物流管理系统等， 熟悉各类型电商系统开发</p>
+			<p>精通PHP＋Mysql的系统开发，能熟练使用javascript, jQuery, Ajax等WEB前端技术， 熟练使用ThinkPHP， CodeIgbiter， Laravel 等PHP框架，熟练Linux， Nginx， Apache , PHP 基本环境配置， 熟练使用Mencached， Redis等数据缓存系统</p>
+			<p>对于互联网的技术具备良好的兴趣，对新事物的接受与学习能力强，爱好读书， 敲码， 业余爱好广泛， 骑行， 登山， 徒步， 游泳等</p>
+			<div class="button"><a class="more" href="/abouts">Read More</a></div>
 		</div>
 		<div class="col-md-6 recent">
 			<h3><span>Recent</span> Blog Post</h3>
+			@foreach ($articles as $k => $article)
+			@if ($k < 3)
 			<div class="recent-top">
 				<div class="recent-left">
 					<img src="images/img9.jpg" class="img-responsive" alt="">
 				</div>
 				<div class="recent-right">
-					<h5>September 20, 2011 <span>Imperdiet sit amet magna.</span></h5>
-					<p> Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi ...</p>
+					<h5>{{ date('Y-m-d', strtotime($article->created_at)) }}<span>&nbsp;&nbsp;<a href="{{ $article->slug }}">{{ $article->title }}</a></span></h5>
+					<p> {!! mb_substr(str_replace('&nbsp;', '', strip_tags($article->body)), 0, 60) !!}</p>
 				</div>
 				<div class="clearfix"></div>
 			</div>
-			<div class="recent-top">
-				<div class="recent-left">
-					<img src="images/img10.jpg" class="img-responsive" alt="">
-				</div>
-				<div class="recent-right">
-					<h5>October 02, 2011 <span>Imperdiet sit amet magna.</span></h5>
-					<p>Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum sapien massa ac turpis faucibus...</p>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-			<div class="recent-top">
-				<div class="recent-left">
-					<img src="images/img11.jpg" class="img-responsive" alt="">
-				</div>
-				<div class="recent-right">
-					<h5>October 13, 2011 <span>Imperdiet sit amet magna.</span></h5>
-					<p> orci luctus non, consectetuer lobortis quis, varius in, purus. Integer ultrices posuere cubilia. Aliquam erat ac ipsum...</p>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-			<div class="button"><a class="more" href="single.html">Read More</a></div>
+			@endif
+			@endforeach
+			<div class="button"><a class="more" href="/blogs">Read More</a></div>
 		</div>
 		<div class="clearfix"></div>
 	</div>

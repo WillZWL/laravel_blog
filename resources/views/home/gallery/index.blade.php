@@ -9,34 +9,15 @@
                 <div class="welcome-top">
                     <div class="portfolio"  id="portfolio">
                         <div id="portfoliolist">
+                            @for ($i=5; $i<=8; $i++)
                             <div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
                                 <div class="portfolio-wrapper grid_box">
                                     <div class="welcome-1">
-                                        <a href="images/img12.jpg" class="swipebox"  title="Image Title"> <img src="images/img12.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+                                        <a href="images/img0{{ $i }}.jpg" class="swipebox"  title="Image Title"> <img src="images/img0{{ $i }}.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
                                     </div>
                                  </div>
                             </div>
-                            <div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
-                                <div class="portfolio-wrapper grid_box">
-                                    <div class="welcome-1">
-                                        <a href="images/img13.jpg" class="swipebox"  title="Image Title"> <img src="images/img13.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
-                                    </div>
-                                 </div>
-                            </div>
-                            <div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
-                                <div class="portfolio-wrapper grid_box">
-                                    <div class="welcome-1">
-                                        <a href="images/img10.jpg" class="swipebox"  title="Image Title"> <img src="images/img10.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
-                                    </div>
-                                 </div>
-                            </div>
-                            <div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
-                                <div class="portfolio-wrapper grid_box">
-                                    <div class="welcome-1">
-                                        <a href="images/img9.jpg" class="swipebox"  title="Image Title"> <img src="images/img9.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
-                                    </div>
-                                 </div>
-                            </div>
+                            @endfor
                             <div class="clearfix"></div>
                         </div>
                         <div class="clearfix"></div>
@@ -45,34 +26,16 @@
                 <div class="welcome-top">
                     <div class="portfolio"  id="portfolio">
                         <div id="portfoliolist">
+                            @for ($i=1; $i<=4; $i++)
                             <div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
                                 <div class="portfolio-wrapper grid_box">
                                     <div class="welcome-1">
-                                        <a href="images/img18.jpg" class="swipebox"  title="Image Title"> <img src="images/img18.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+                                        <a href="images/img0{{ $i }}.jpg" class="swipebox"  title="Image Title"> <img src="images/img0{{ $i }}.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
                                     </div>
                                  </div>
                             </div>
-                            <div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
-                                <div class="portfolio-wrapper grid_box">
-                                    <div class="welcome-1">
-                                        <a href="images/img17.jpg" class="swipebox"  title="Image Title"> <img src="images/img17.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
-                                    </div>
-                                 </div>
-                            </div>
-                            <div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
-                                <div class="portfolio-wrapper grid_box">
-                                    <div class="welcome-1">
-                                        <a href="images/img16.jpg" class="swipebox"  title="Image Title"> <img src="images/img16.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
-                                    </div>
-                                 </div>
-                            </div>
-                            <div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
-                                <div class="portfolio-wrapper grid_box">
-                                    <div class="welcome-1">
-                                        <a href="images/img15.jpg" class="swipebox"  title="Image Title"> <img src="images/img15.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
-                                    </div>
-                                 </div>
-                            </div>
+                            @endfor
+
                             <div class="clearfix"></div>
                         </div>
                         <div class="clearfix"></div>
@@ -80,33 +43,15 @@
                 </div>
                 <div class="welcome-top">
                     <div id="portfoliolist">
+                        @for ($i=10; $i<=13; $i++)
                         <div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
                             <div class="portfolio-wrapper grid_box">
                                 <div class="welcome-1">
-                                    <a href="images/img14.jpg" class="swipebox"  title="Image Title"> <img src="images/img14.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+                                    <a href="images/img{{ $i }}.jpg" class="swipebox"  title="Image Title"> <img src="images/img{{ $i }}.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
-                            <div class="portfolio-wrapper grid_box">
-                                <div class="welcome-1">
-                                    <a href="images/img13.jpg" class="swipebox"  title="Image Title"> <img src="images/img13.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
-                                </div>
-                             </div>
-                        </div>
-                        <div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
-                            <div class="portfolio-wrapper grid_box">
-                                <div class="welcome-1">
-                                    <a href="images/img12.jpg" class="swipebox"  title="Image Title"> <img src="images/img12.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
-                                </div>
-                             </div>
-                        </div>
-                        <div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
-                            <div class="portfolio-wrapper grid_box">
-                                <div class="welcome-1">
-                                    <a href="images/img11.jpg" class="swipebox"  title="Image Title"> <img src="images/img11.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
-                                </div>
-                        </div>
+                        @endfor
                         <div class="clearfix"></div>
                     </div>
                     <div class="clearfix"></div>

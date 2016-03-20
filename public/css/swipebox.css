@@ -51,7 +51,7 @@
   display: inline-block;
   max-height: 100%;
   max-width: 100%;
-  width: 35%;
+  width: 75%;
   height: auto;
   vertical-align: middle;
 }
@@ -187,7 +187,7 @@
   }
 }
 
-/* Skin 
+/* Skin
 --------------------------*/
 #swipebox-overlay {
   background: rgba(13, 13, 13, 0.9);

@@ -1,7 +1,7 @@
 <!-- footer -->
 <div class="footer">
 	<div class="container">
-		<div class="col-md-4 social">
+		<!-- <div class="col-md-4 social">
 			<h4>Social</h4>
 			<p>Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. </p>
 			<ul>
@@ -10,13 +10,13 @@
 				<li><a href="#"><i class="rss"> </i></a></li>
 				<div class="clearfix"></div>
 			</ul>
-		</div>
-		<div class="col-md-4 information">
+		</div> -->
+		<!-- <div class="col-md-4 information">
 			<h4>Information</h4>
 			<p>Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. </p>
 			<p>Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Aliquam erat ac ipsum.</p>
-		</div>
-		<div class="col-md-4 searby">
+		</div> -->
+		<!-- <div class="col-md-4 searby">
 			<h4>Search by</h4>
 			<div class="col-md-6 by1">
 					<ul>
@@ -44,10 +44,12 @@
 					</ul>
 				</div>
 				<div class="clearfix"> </div>
-		</div>
+		</div> -->
 		<div class="clearfix"></div>
 		<div class="bottom">
-			<p>Copyright &copy; 2015.Company name All rights reserved.<a target="_blank" href="">Laravel</a></p>
+			<p>Copyright &copy; 2016-2018.Will All rights reserved.<br/>
+			Developed By <a href="/abouts" target="_blank">Will Zhang</a>,&nbsp;&nbsp;&nbsp;&nbsp;Powered By <a href="https://laravel.com/">Laravel</a><br/>
+			Run On <a href="https://www.aliyun.com">Aliyun's</a> Elastic Compute Service
 		</div>
 	</div>
 </div>

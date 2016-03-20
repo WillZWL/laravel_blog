@@ -5,7 +5,7 @@
 	<script src="/about/js/jquery.min.js"> </script>
 	<link href="/about/css/bootstrap.css" rel='stylesheet' type='text/css' />
 	<link href="/about/css/style.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<!-- <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -41,7 +41,7 @@
 						 <li><a class="scroll" href="#about">{{ trans('about.about')}}</a></li>
 						 <li><a class="scroll" href="#skills">{{ trans('about.skill')}}</a></li>
 						 <li><a class="scroll" href="#port">{{ trans('about.portfolio')}}</a></li>
-						 <li><a class="scroll" href="#contact">{{ trans('about.contact')}}</a></li>
+						 <li><a class="" href="/contact">{{ trans('about.contact')}}</a></li>
 						 <li><a class="" href="/">{{ trans('about.blog')}}</a></li>
 					 </ul>
 				 </div>
@@ -81,7 +81,7 @@
 				 <span><p>毕业于武汉大学东湖分校管理学院， 电子商务专业， 在校担任创业协会副会长期间， 主持领导团队开发了 论坛，社区，B2C校园订餐商城，并指导多名学生开设运营自己的淘宝店铺，具有一定的互联网产品的开发运营管理经验。
 				 </p>
 				 <hr>
-				 <p>毕业以后先后供职于网站外包公司，跨境电子商务企业， 参与设计开发过旅游散客管理系统， B2C电子商务系统，产品仓储管理系统，产品物流管理系统等。</p></span>
+				 <p>毕业以后先后供职于网站外包公司，跨境电子商务企业， 参与设计开发过旅游散客管理系统， B2C电子商务系统，产品仓储管理系统，产品物流管理系统等。  <a href="/timeline" target="_blank"><<< 更多详情 >>></a></p> </span>
 
 				<h3><a href="/timeline">Work Experience</a></h3>
 			  <div class="years">

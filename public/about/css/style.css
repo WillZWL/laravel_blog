@@ -6,6 +6,7 @@
 ---*/
 html,body{
 	font-family: '微软雅黑', sans-serif;
+	background: #F2F2F2;
 }
 .clear{
 	clear:both;
@@ -172,6 +173,9 @@ a.downarrow{
 	width: 71%;
 	margin: 0 auto;
 }
+.about span p a{
+	color:#fff;
+}
 .about hr {
 	width: 73%; color: #000; height: 1px; background-color:white;margin-top:10px; margin-bottom: 10px;
 }
@@ -262,7 +266,7 @@ a.down{
 /*------Portfolio-Section STARTS---------*/
 .Portfolio{
 	min-height:600px;
-	background:#ffffff;
+	/*background:#ffffff;*/
 	text-align:center;
 }
 .Portfolio-section h2{
@@ -320,11 +324,13 @@ a.portdown{
 	}
 /*------FOOTER STARTS---------*/
 .footer{
-	background: url(../images/footerbg.jpg);
+	/*background: url(../images/footerbg.jpg);*/
+	background: #F9F9F9;
 	position: relative;
-	min-height: 567px;
+	/*min-height: 567px;*/
 	background-size: cover;
 	position:relative;
+	text-align: center;
 }
 .contact-section h2{
 	color:#D2D1D1;

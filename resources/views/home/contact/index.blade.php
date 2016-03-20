@@ -1,43 +1,60 @@
 @extends('home.layout')
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.4"></script>
+<style type="text/css">
+    #allmap {width: 100%;height:300px;margin:0;font-family:"微软雅黑";}
+</style>
+
 @section('content')
     <div class="main">
         <div class="container">
             <div class="contact">
                 <div class="contact-head text-center">
                     <h2>Contact Me</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+                    <p></p>
                 </div>
                 <!-- contact-grids -->
                 <div class="contact-grids">
-                    <div class="contact-map">
-                        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1578265.0941403757!2d-98.9828708842255!3d39.41170802696131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited+States!5e0!3m2!1sen!2sin!4v1407515822047"> -->
-                        </iframe>
+                    <div class="contact-map" style="height: 300px;">
+                        <div id="allmap"></div>
+                        <script type="text/javascript">
+                            // 百度地图API功能
+                            var map = new BMap.Map("allmap");    // 创建Map实例
+                            map.centerAndZoom(new BMap.Point(113.988, 22.570), 12);  // 初始化地图,设置中心点坐标和地图级别
+                            map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+                            map.setCurrentCity("深圳");          // 设置地图显示的城市 此项是必须设置的
+                            // map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+                        </script>
                     </div>
                     <!-- contact-form -->
                     <div class="contact-form">
-                        <form>
-                            <div class="contact-form-row">
-                                <div>
-                                    <span>Name :</span>
-                                    <input type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
-                                </div>
-                                <div>
-                                    <span>Email :</span>
-                                    <input type="text" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
-                                </div>
-                                <div>
-                                    <span>Subject :</span>
-                                    <input type="text" class="text" value="Subject" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}">
+                        <div class="contact-left">
+                            <form>
+                                <div class="contact-form-row">
+                                    <div>
+                                        <span>Email :</span>
+                                        <input type="text" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
+                                    </div>
+                                    <div>
+                                        <span>Subject :</span>
+                                        <input type="text" class="text" value="Subject" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}">
+                                    </div>
+                                    <div class="clearfix"> </div>
                                 </div>
                                 <div class="clearfix"> </div>
-                            </div>
-                            <div class="clearfix"> </div>
-                            <div class="contact-form-row2">
-                                <span>Message :</span>
-                                <textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Thanks for Your Message';}">Thanks for Your Message</textarea>
-                            </div>
-                            <input type="submit" value="send">
-                        </form>
+                                <div class="contact-form-row2">
+                                    <div>
+                                        <span>Message :</span>
+                                        <textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Thanks for Your Message';}">Thanks for Your Message</textarea>
+                                    </div>
+                                    <div>
+                                        <span>Scan MY WeChat</span>
+                                        <img src="/images/wechat.png">
+                                    </div>
+                                </div>
+                                    <div class="clearfix"> </div>
+                                    <input type="submit" value="send">
+                            </form>
+                        </div>
                     </div>
                     <!-- contact-form -->
                 </div>
@@ -45,4 +62,5 @@
             </div>
         </div>
     </div>
+
 @stop

@@ -177,7 +177,7 @@ ul a:focus {
 }
 .rslides img {
   display: block;
-  height: auto;
+  height: 640px;
   float: left;
   width: 100%;
   border: 0;
@@ -391,15 +391,19 @@ h5 span {
 	padding: 0 0 0.3em;
 }
 .footer {
-	background: url(../images/foot.png) no-repeat center fixed;
+	/*background: url(../images/foot.png) no-repeat center fixed;*/
+	background: #F9F9F9;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	-ms-background-size: cover;
-	min-height: 400px;
+	/*min-height: 400px;*/
 	text-align: center;
 	padding: 0 0 1em;
+}
+.footer .bottom a {
+	color: #E8C99B;
 }
 .social ul {
 	padding: 0;
@@ -461,7 +465,8 @@ i.rss:hover{
 	font-size: 0.9em;
 	color: #241103;
 	line-height: 1.8em;
-	text-align: left;
+	/*text-align: left;*/
+	text-align: centre;
 	margin: 1em 0;
 }
 .by1 li {
@@ -531,6 +536,11 @@ div#portfoliolist {
 	cursor:pointer;
 	margin:0em;
 }
+.portfolio-wrapper .welcome-1 img {
+	width: 285px;
+	height:156px;
+}
+
 .portfolio img {
 	width:100%;
 	transition: all 300ms!important;
@@ -1093,21 +1103,29 @@ a.more:hover{
 .contact-form-row div:nth-child(3){
 	margin-right:0;
 }
+.contact-form-row2 div{
+	/*width: 32.6%;*/
+	float: left;
+	margin-right: 1%;
+}
 .contact-form-row2 textarea{
-	width:100%;
+	width:755px;
 	padding:1em;
 	font-family: 'Droid Sans', sans-serif;
 	border:1px solid #EEE;
 	-webkit-appearance:none;
 	outline:none;
 	color:#777;
-	min-height:320px;
+	min-height:200px;
 	resize:none;
 	transition:border-color 0.4s;
 	-webkit-transition:border-color 0.4s;
 	-moz-transition:border-color 0.4s;
 	-o-transition:border-color 0.4s;
 	-ms-transition:border-color 0.4s;
+}
+.contact-form-row2 img {
+	width: 200px;
 }
 .contact-form-row2 {
 	margin-top:1em;
@@ -1184,9 +1202,10 @@ a.more:hover{
 .bottom p {
 	font-size: 1.1em;
 	font-weight: 400;
-	color: #241103;
+	color: #aeaeae;
 	line-height: 1.8em;
-	text-align:right;
+	/*text-align:right;*/
+	text-align:center;
 }
 .bottom a {
 	color: #d4a258;

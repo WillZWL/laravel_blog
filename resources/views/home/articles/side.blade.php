@@ -5,13 +5,12 @@
             <li><a href="#">{{ $category->name }}</a></li>
         @endforeach
     </ul>
-    <ul class="archive-list">
+    <!-- <ul class="archive-list">
         <h3>Tags</h3>
         @foreach ($tags as $k => $tag)
         <li><a href="#">{{ $tag->name }}</a></li>
         @endforeach
-
-    </ul>
+    </ul> -->
 
     <ul>
         <h3>时间</h3>

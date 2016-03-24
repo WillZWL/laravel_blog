@@ -24,8 +24,10 @@ class HomeController extends Controller
     {
         $page_size = setting('page_size');
 
-        $articles = \App\Article::with('tags', 'category')->latest()->take($page_size)->get();
+        $articles = \App\Article::with('tags', 'category')->latest()->take(5)->get();
 
-        return view('home.index', compact('articles'));
+        $motto = setting('motto');
+
+        return view('home.index', compact('articles', 'motto'));
     }
 }

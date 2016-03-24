@@ -66,11 +66,12 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth
 Route::get('login', 'Admin\AuthController@getLogin');
 Route::post('login', 'Admin\AuthController@postLogin');
 Route::get('logout', 'Admin\AuthController@logout');
+
 /*
  * home
  */
 Route::group(['namespace' => 'Home'], function () {
-    Route::resource('/', 'HomeController@index');
+    Route::get('/', 'HomeController@index');
     Route::get('tags', 'TagsController@index');
     Route::get('tags/{slug}', 'TagsController@show');
     Route::get('categories', 'CategoriesController@index');

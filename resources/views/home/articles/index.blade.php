@@ -32,18 +32,7 @@
 						@endforeach
 
 						<div class="pagination pagination__posts">
-							<ul>
-								<li class="first"><a href="#">First</a></li>
-								<li class="prev"><a href="#">Prev</a></li>
-								<li class="active"><a href="#">1</a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
-								<li><a href="#">5</a></li>
-								<li class="next"><a href="#">Next</a></li>
-								<li class="last"><a href="#">Last</a></li>
-								<div class="clearfix"></div>
-							</ul>
+							{!! $articles->render() !!}
 						</div>
 					</div>
 					<!-- side -->

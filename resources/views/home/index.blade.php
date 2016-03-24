@@ -23,7 +23,7 @@
 <!-- ipsum -->
 	<div class="ipsum">
 		<div class="container">
-			<h3><span>"</span>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis. <span>"</span></h3>
+			<h3><span>"</span>人生就像是写代码，不断的重复着运行、调试、更新、迭代。也许我们都不能写出完美的代码，但任何时候都要拥有一颗迭代的心<span>"</span></h3>
 		</div>
 	</div>
 <!-- ipsum -->
@@ -146,7 +146,7 @@
 			@if ($k < 3)
 			<div class="recent-top">
 				<div class="recent-left">
-					<img src="images/img9.jpg" class="img-responsive" alt="">
+					<img src="{{ $article->image }}" class="img-responsive" alt="">
 				</div>
 				<div class="recent-right">
 					<h5>{{ date('Y-m-d', strtotime($article->created_at)) }}<span>&nbsp;&nbsp;<a href="{{ $article->slug }}">{{ $article->title }}</a></span></h5>

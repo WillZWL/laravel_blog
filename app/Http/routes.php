@@ -70,7 +70,7 @@ Route::get('logout', 'Admin\AuthController@logout');
 /*
  * home
  */
-Route::group(['namespace' => 'Home'], function () {
+Route::group(['namespace' => 'Home', 'middleware' => 'httpcache'], function () {
     Route::get('/', 'HomeController@index');
     Route::get('tags', 'TagsController@index');
     Route::get('tags/{slug}', 'TagsController@show');

@@ -151,7 +151,7 @@ return [
 		'GrahamCampbell\HTMLMin\HTMLMinServiceProvider',
 		'Roumen\Sitemap\SitemapServiceProvider',
 		'Stevenyangecho\UEditor\UEditorServiceProvider',
-
+		'Barryvdh\HttpCache\ServiceProvider',
 	],
 
 	/*

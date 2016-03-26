@@ -27,9 +27,9 @@
 	   <div class="about_header">
 			<div class="nav lang">
 				<ul>
-					<li><a class="" href="zh-cn">zh-cn</a></li>
+					<li><a href="/abouts/zh-cn">zh-cn</a></li>
 					<li>/</li>
-					<li><a class="" href="en">en</a></li>
+					<li><a href="/abouts/en">en</a></li>
 				</ul>
 			</div>
 			<div class="container">
@@ -73,7 +73,7 @@
 	  </div>
  </div>
  <div class="content">
-	   <div id="about" class="about">
+	  <div id="about" class="about">
 		 <div class="container">
 			   <div class="header-section text-center">
 				  <h2><span> </span>ABOUT<span> </span></h2>
@@ -111,112 +111,117 @@
 		  </div>
 	  </div>
 	  <div id="skills" class="skills">
-	  <div class="container">
-	     <div class="skills-grids">
-			  <div class="skill-section text-center">
-				  <h2><span> </span>SKILLS<span> </span></h2>
-			  </div>
-				  <div class="services_grids">
-					  <div id="canvas">
-							<div class="skill-grids text-center">
-									<div class="col-md-3">
-										<div class="skill-grid">
-											<h3>PHP</h3>
-										 </div>
-									</div>
-									<div class="col-md-3">
-										<div class="skill-grid">
-											<h3>MYSQL</h3>
-										 </div>
-									</div>
-									<div class="col-md-3">
-										<div class="skill-grid">
-											<h3>jQuery</h3>
-										 </div>
-									</div>
-									<div class="col-md-3">
-										<div class="skill-grid">
-											<h3>JAVASCRIPT</h3>
-										 </div>
-									</div>
-									<div class="clearfix"> </div>
-							  </div>
-					   </div>
-					   <div id="canvas">
-							<div class="skill-grids text-center">
-									<div class="col-md-3">
-										<div class="skill-grid">
-											<h3>ThinkPHP</h3>
-										 </div>
-									</div>
-									<div class="col-md-3">
-										<div class="skill-grid">
-											<h3>Codeigniter</h3>
-										 </div>
-									</div>
-									<div class="col-md-3">
-										<div class="skill-grid">
-											<h3>Laravel</h3>
-										 </div>
-									</div>
-									<div class="col-md-3">
-										<div class="skill-grid">
-											<h3>Python</h3>
-										 </div>
-									</div>
-									<div class="clearfix"> </div>
-							  </div>
-					   </div>
+		  <div class="container">
+		     <div class="skills-grids">
+				  <div class="skill-section text-center">
+					  <h2><span> </span>SKILLS<span> </span></h2>
 				  </div>
+					  <div class="services_grids">
+						  <div id="canvas">
+								<div class="skill-grids text-center">
+										<div class="col-md-3">
+											<div class="skill-grid">
+												<h3>PHP</h3>
+											 </div>
+										</div>
+										<div class="col-md-3">
+											<div class="skill-grid">
+												<h3>MYSQL</h3>
+											 </div>
+										</div>
+										<div class="col-md-3">
+											<div class="skill-grid">
+												<h3>jQuery</h3>
+											 </div>
+										</div>
+										<div class="col-md-3">
+											<div class="skill-grid">
+												<h3>JAVASCRIPT</h3>
+											 </div>
+										</div>
+										<div class="clearfix"> </div>
+								  </div>
+						   </div>
+						   <div id="canvas">
+								<div class="skill-grids text-center">
+										<div class="col-md-3">
+											<div class="skill-grid">
+												<h3>ThinkPHP</h3>
+											 </div>
+										</div>
+										<div class="col-md-3">
+											<div class="skill-grid">
+												<h3>Codeigniter</h3>
+											 </div>
+										</div>
+										<div class="col-md-3">
+											<div class="skill-grid">
+												<h3>Laravel</h3>
+											 </div>
+										</div>
+										<div class="col-md-3">
+											<div class="skill-grid">
+												<h3>Python</h3>
+											 </div>
+										</div>
+										<div class="clearfix"> </div>
+								  </div>
+						   </div>
+					  </div>
+				 </div>
 			 </div>
-		 </div>
-		   <a class="down scroll" href="#port"><span> </span></a>
+			   <a class="down scroll" href="#port"><span> </span></a>
+		  </div>
 	  </div>
-	  </div>
-		<div id="port" class="Portfolio">
-			  <div class="Portfolio-section text-center">
+	  <div id="port" class="Portfolio">
+			<div class="Portfolio-section text-center">
 			      <h2><span> </span>PORTFOLIO<span> </span></h2>
-			  </div>
-			  <div class="container">
-				  <div class="portfolio-grids">
-					  <div class="portfolio-grid col-md-4">
+			</div>
+			<div class="container">
+				<div class="portfolio-grids">
+					<div class="portfolio-grid col-md-4">
 						 <a href="http://www.520fb.com"><img src="/about/images/monitr1.png"></a>
 						  <p>发彪网 一家专业做定制的网站</p>
 						  <!-- <a class="rightarrow" href="#"><span> </span></a> -->
-					  </div>
-					  <div class="portfolio-grid col-md-4">
+					</div>
+					<div class="portfolio-grid col-md-4">
 						  <a href="#"><img src="/about/images/monitr2.png"></a>
 						  <p>ValueBasket  The best prices on a wide range of electronics, with free shipping!</p>
 						  <!-- <a class="rightarrow" href="#"><span> </span></a> -->
-					  </div>
-					  <div class="portfolio-grid col-md-4">
+					</div>
+					<div class="portfolio-grid col-md-4">
 						  <a href="#"><img src="/about/images/monitr3.png"></a>
 						  <p>WMS  物流管理系统</p>
 						  <!-- <a class="rightarrow" href="#"><span> </span></a> -->
-					  </div>
-					  <div class="clear"> </div>
-				  </div>
-				   <div class="portfolio-grids">
-					  <div class="portfolio-grid col-md-4">
+					</div>
+				    <div class="clear"> </div>
+				</div>
+				<div class="portfolio-grids">
+					<div class="portfolio-grid col-md-4">
 						 <a href=""><img src="/about/images/monitr1.png"></a>
 						  <p>CPS 产品管理信息系统</p>
 						  <!-- <a class="rightarrow" href="#"><span> </span></a> -->
-					  </div>
-					  <div class="portfolio-grid col-md-4">
+					</div>
+					<div class="portfolio-grid col-md-4">
 						  <a href="#"><img src="/about/images/monitr2.png"></a>
 						  <p>shop.eservicesgroup</p>
 						  <!-- <a class="rightarrow" href="#"><span> </span></a> -->
-					  </div>
-					  <div class="portfolio-grid col-md-4">
+					</div>
+					<div class="portfolio-grid col-md-4">
 						  <a href="#"><img src="/about/images/monitr3.png"></a>
 						  <p>SNS  在线社区</p>
 						  <!-- <a class="rightarrow" href="#"><span> </span></a> -->
-					  </div>
-					  <div class="clear"> </div>
-				  </div>
-				  <a class="portdown scroll" href="#contact"><span> </span></a>
-
-			  </div>
+					 </div>
+					<div class="clear"> </div>
+				</div>
+				<a class="portdown scroll" href="#contact"><span> </span></a>
+			</div>
+	  </div>
+	  <div id='contact' class="contact">
+	  	<div class="text-center">
+			<h2></span>扫一扫<span></h2>
 		</div>
-  </div>
+	  	<img src="/images/wechat.png">
+	  </div>
+</div>
 @include('home.common.footer')

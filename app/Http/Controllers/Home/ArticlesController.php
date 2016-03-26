@@ -15,10 +15,9 @@ class ArticlesController extends Controller
     public function index()
     {
         $page_size = setting('page_size');
-        $articles = Article::with('tags', 'category')->latest()->paginate($page_size);
+        $articles = Article::latest()->paginate($page_size);
         $categories = Category::getSortedCategories();
-        $tags = Tag::all();
-        // var_dump($categories);
+        $tags = Tag::get_all();
         return view('home.articles.index', compact('articles', 'categories', 'tags'));
     }
 
@@ -34,7 +33,7 @@ class ArticlesController extends Controller
         try {
             $article = Article::findBySlug($slug);
             $categories = Category::getSortedCategories();
-            $tags = Tag::all();
+            $tags = Tag::get_all();
             return view('home.articles.show', compact('article', 'categories', 'tags'));
         } catch (\Exception $e) {
             return redirect('./404.html');

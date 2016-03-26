@@ -770,9 +770,10 @@ div#portfoliolist {
 }
 h2.post_title {
 	margin-bottom: 0.5em;
-	font-size: 1.5em;
+	font-size: 1.8em;
 	padding: 0.8em 0;
 	text-transform: uppercase;
+	color: #e6a549;
 }
 h2.post_title a{
 	font-weight:600;
@@ -781,11 +782,22 @@ h2.post_title a{
 h2.post_title a:hover{
 	color:#898989;
 }
-.blog_grid p {
+.blog_list p {
 	font-size: 1.2em;
 	line-height: 1.8em;
 	/*color: #141414;*/
-	padding-top: 1.2em;
+	margin-top: 0.6em;
+	padding:0.8em;
+	box-shadow: 0px 0px 10px 5px #BBB9B9;
+}
+.blog_grid img {
+	width: 825px;
+	height: 450px;
+}
+.blog_content {
+	padding-top: 1em;
+	box-shadow: 0px 0px 10px 5px #BBB9B9;
+	margin-bottom: 5em;
 }
 ul.links{
 	padding:8px 0px;

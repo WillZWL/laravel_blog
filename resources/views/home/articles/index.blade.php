@@ -7,9 +7,9 @@
 					<div class="col-md-9 cont span_2_of_3">
 
 						@foreach ($articles as $k => $article)
-						<div class="blog_grid">
+						<div class="blog_grid blog_list">
 							<h2 class="post_title"><a href="{{ $article->slug }}">{{ $article->title }}</a></h2>
-							<a href="{{ $article->slug }}" class="blog_list_img"><img src="{{ $article->image }}" class="img-responsive" alt="{{ $article->title }}" style="width: 820px;height: 450px;" /></a>
+							<a href="{{ $article->slug }}" class="blog_list_img"><img src="{{ $article->image }}" class="img-responsive" alt="{{ $article->title }}"/></a>
 							<p>{!! mb_substr(str_replace('&nbsp;', '', strip_tags($article->body)), 0, 200) !!}</p>
 							<div class="button1"><a class="more" href="{{ $article->slug }}">Read More</a></div>
 							<!-- 多说评论框 start -->

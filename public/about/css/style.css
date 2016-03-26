@@ -319,9 +319,17 @@ a.rightarrow{
 	display:inline-block;
 	}
 a.portdown{
-	margin:4em 0 3em 1em;
+	margin:4em 3em 1em;
 	display:inline-block;
 	}
+#contact {
+	width: 200px;
+	margin: 0 auto;
+	padding:40px 0;
+}
+#contact img {
+	width: 200px;
+}
 /*------FOOTER STARTS---------*/
 .footer{
 	/*background: url(../images/footerbg.jpg);*/

@@ -23,7 +23,7 @@
 <!-- ipsum -->
 	<div class="ipsum">
 		<div class="container">
-			<h3><span>"</span>{{ $motto }}<span>"</span></h3>
+			<h3><span>"</span>{{ setting('motto') }}<span>"</span></h3>
 		</div>
 	</div>
 <!-- ipsum -->

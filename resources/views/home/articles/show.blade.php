@@ -4,7 +4,7 @@
 		<div class="container">
 		   <div class="content">
 		 		<div class="section group">
-					<div class="col-md-9 cont span_2_of_3">
+					<div class="col-md-9 cont span_2_of_3 blog_content">
 					  	<div class="blog_grid">
 				  	   	   <h2 class="post_title">{{ $article->title }}</h2>
 				  	   	   <img src="{{ $article->image }}" class="img-responsive" alt="{{ $article->title }}" style="width: 820px;height: 450px;" />

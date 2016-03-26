@@ -24,4 +24,11 @@ class Tag extends Model
     {
         return $query->whereSlug($slug)->firstOrFail();
     }
+
+    public static function get_all()
+    {
+        return \Cache::tags('tags')->rememberForever('tags', function () {
+            return Category::all();
+        });
+    }
 }

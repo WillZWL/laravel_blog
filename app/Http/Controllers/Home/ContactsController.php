@@ -1,9 +1,8 @@
 <?php namespace App\Http\Controllers\Home;
 
-use App\Http\Requests;
+use App\Message;
 use App\Http\Controllers\Controller;
-
-use Illuminate\Http\Request;
+use App\Http\Requests\MessageRequest;
 
 class ContactsController extends Controller {
 
@@ -16,5 +15,15 @@ class ContactsController extends Controller {
 	{
 		//
 		return view('home.contact.index');
+	}
+
+	public function message(MessageRequest $request)
+	{
+		if (Message::create($request->all())) {
+			flash()->success('Thanks For Your Message,Will Reply as soon as possible');
+		} else {
+			flash()->error('Sorry, Your Message Send Failed!');
+		}
+		return redirect('contact');
 	}
 }

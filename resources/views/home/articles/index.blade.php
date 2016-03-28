@@ -10,8 +10,11 @@
 						<div class="blog_grid blog_list">
 							<h2 class="post_title"><a href="{{ $article->slug }}">{{ $article->title }}</a></h2>
 							<a href="{{ $article->slug }}" class="blog_list_img"><img src="{{ $article->image }}" class="img-responsive" alt="{{ $article->title }}"/></a>
-							<p>{!! mb_substr(str_replace('&nbsp;', '', strip_tags($article->body)), 0, 200) !!}</p>
-							<div class="button1"><a class="more" href="{{ $article->slug }}">Read More</a></div>
+							<p class="blog_list_p">
+								{!! mb_substr(str_replace('&nbsp;', '', strip_tags($article->body)), 0, 200) !!}
+								......<a class="more" href="{{ $article->slug }}">Read More</a>
+							</p>
+							<!-- <div class="button1"><a class="more" href="{{ $article->slug }}">Read More</a></div> -->
 							<!-- 多说评论框 start -->
 							<div class="ds-thread" data-thread-key="{{ $article->slug }}" data-title="{{ $article->title }}" data-url="{{ setting('site_url').$article->slug }}"></div>
 							<!-- 多说评论框 end -->

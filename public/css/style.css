@@ -788,6 +788,8 @@ h2.post_title a:hover{
 	/*color: #141414;*/
 	margin-top: 0.6em;
 	padding:0.8em;
+}
+.blog_list_p {
 	box-shadow: 0px 0px 10px 5px #BBB9B9;
 }
 .blog_grid img {
@@ -1036,12 +1038,13 @@ ul.comment-list .desc {
 }
 
 a.more {
-	background: url(../images/rdd.png)no-repeat -9px -6px;
+	background: url(../images/rdd.png)no-repeat -9px 3px;
 	color: #393939;
 	text-decoration: none;
 	font-size: 1em;
 	font-weight: 400;
-	padding: 0.3em 1.5em;
+	margin-left: 5em;
+	padding: 0.3em 1em;
 	display: inline-block;
 	text-decoration: none;
 	border-radius: 3px;

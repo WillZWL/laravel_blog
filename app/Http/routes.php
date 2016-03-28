@@ -81,6 +81,7 @@ Route::group(['namespace' => 'Home', 'middleware' => 'httpcache'], function () {
     Route::get('blogs', 'ArticlesController@index');
     Route::get('timeline', 'TimelineController@index');
     Route::get('contact', 'ContactsController@index');
+    Route::post('contact/message', 'ContactsController@message');
     Route::get('gallerys', 'GallerysController@index');
     Route::get('{slug}', 'ArticlesController@show');
 });

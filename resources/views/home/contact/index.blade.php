@@ -28,15 +28,15 @@
                     <!-- contact-form -->
                     <div class="contact-form">
                         <div class="contact-left">
-                            <form>
+                            {!! Form::open(['url' => 'contact/message']) !!}
                                 <div class="contact-form-row">
                                     <div>
                                         <span>Email :</span>
-                                        <input type="text" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
+                                        <input type="text" name='email' class="text form-control" value="" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">
                                     </div>
                                     <div>
                                         <span>Subject :</span>
-                                        <input type="text" class="text" value="Subject" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}">
+                                        <input type="text" name='subject' class="text form-control" value="" placeholder="Subject" onfocus="this.placeholder = '';" onblur="this.placeholder = 'Subject'">
                                     </div>
                                     <div class="clearfix"> </div>
                                 </div>
@@ -44,7 +44,7 @@
                                 <div class="contact-form-row2">
                                     <div>
                                         <span>Message :</span>
-                                        <textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Thanks for Your Message';}">Thanks for Your Message</textarea>
+                                        <textarea name='message' placeholder='Thanks for Your Message' class="form-control" onfocus="this.placeholder = '';" onblur="if (this.placeholder == '') {this.placeholder = 'Thanks for Your Message';}"></textarea>
                                     </div>
                                     <div>
                                         <span>Scan MY WeChat</span>
@@ -53,7 +53,10 @@
                                 </div>
                                     <div class="clearfix"> </div>
                                     <input type="submit" value="send">
-                            </form>
+                                <div class="contact-form-row">
+                                    @include('flash::message')
+                                </div>
+                            {!! Form::close() !!}
                         </div>
                     </div>
                     <!-- contact-form -->
@@ -62,5 +65,4 @@
             </div>
         </div>
     </div>
-
 @stop

@@ -46,22 +46,30 @@ $(document).ready(function(){
 <!-- header -->
 	<div class="header">
 		<div class="container">
-<!-- 			<div class="logo">
-				<a href="index.html"><img src="images/logo.png" class="img-responsive" alt=""></a>
-			</div> -->
+			<div class="logo">
+				<a href="/"><img src="images/logo.png" class="img-responsive" alt=""></a>
+			</div>
 			<div class="header-bottom">
 				<div class="head-nav">
-					<span class="menu">
-						<ul class="cl-effect-3">
-							<li id='home'><a href="/">Home</a></li>
-							<li id="blogs"><a href="blogs">Blog</a></li>
-                            <li id="gallerys"><a href="gallerys">Gallery</a></li>
-                            <li id="contact"><a href="contact">Contact</a></li>
-							<li><a href="abouts" target="_blank">About</a></li>
-							<div class="clearfix"></div>
-						</ul>
-                    </span>
+					<span class="menu"> </span>
+					<ul class="cl-effect-3">
+						<li id='home'><a href="/">Home</a></li>
+						<li id="blogs"><a href="blogs">Blog</a></li>
+                        <li id="gallerys"><a href="gallerys">Gallery</a></li>
+                        <li id="contact"><a href="contact">Contact</a></li>
+						<li><a href="abouts" target="_blank">About</a></li>
+						<div class="clearfix"></div>
+					</ul>
 				</div>
+                <!-- script-for-nav -->
+                    <script>
+                        $( "span.menu" ).click(function() {
+                          $( ".head-nav ul" ).slideToggle(300, function() {
+                            // Animation complete.
+                          });
+                        });
+                    </script>
+                <!-- script-for-nav -->
 				<div class="search2">
 					<form>
 						<input type="text" value="Search.." onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Search..';}">

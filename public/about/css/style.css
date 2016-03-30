@@ -701,7 +701,7 @@ p.copy-right a{
 		text-align: center;
 	}
 	a.downarrow {
-		top: 201px;
+		/*top: 201px;*/
 		left: 42%;
 	}
 	.years {

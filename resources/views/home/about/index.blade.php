@@ -25,24 +25,22 @@
 <body>
  <div id="top-top" class="headerbg">
 	   <div class="about_header">
-			<div class="nav lang col-md-3">
-				<ul>
-					<li><a href="/abouts/zh-cn">zh-cn</a></li>
-					<li>/</li>
-					<li><a href="/abouts/en">en</a></li>
-				</ul>
-			</div>
-			<div class="container col-md-3">
+			<div class="container">
 				   <div class="about_logo">
 						<a href="/">{{ trans('about.hello')}}</a>
 				   </div>
-				  <div class="nav col-md-3">
-					 <ul>
-						 <li><a class="" href="#skills">{{ trans('about.skill')}}</a></li>
-						 <li><a class="" href="#port">{{ trans('about.portfolio')}}</a></li>
-						 <li><a class="" href="/contact">{{ trans('about.contact')}}</a></li>
-						 <li><a class="" href="/">{{ trans('about.blog')}}</a></li>
-					 </ul>
+				  <div class="nav">
+					<ul>
+						<li><a href="/abouts/zh-cn">zh-cn</a></li>
+						<!-- <li>/</li> -->
+						<li><a href="/abouts/en">en</a></li>
+					</ul>
+					 <!-- <ul>
+						 <li><a class="col-md-6" href="#skills">{{ trans('about.skill')}}</a></li>
+						 <li><a class="col-md-6" href="#port">{{ trans('about.portfolio')}}</a></li>
+						 <li><a class="col-md-6" href="/contact">{{ trans('about.contact')}}</a></li>
+						 <li><a class="col-md-6" href="/">{{ trans('about.blog')}}</a></li>
+					 </ul> -->
 				 </div>
 				<div class="clear"></div>
 			</div>

@@ -3,7 +3,7 @@
     //about me page language
     return [
         'about_me' => '关于我',
-        'hello' => "Hello, I'm Will Zhang",
+        'hello' => "Hello, I'm Will",
         'about' => '关于',
         'skill' => "技能",
         'portfolio' => '项目',

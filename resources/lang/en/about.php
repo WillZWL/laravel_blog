@@ -10,7 +10,7 @@
         'contact' => 'CONTACT',
         'blog' => 'Blog',
         'name_is' => "My name is",
-        "name" => "Will Zhang",
+        "name" => "Will",
         'job' => "Web Developer"
     ];
 

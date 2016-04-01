@@ -673,6 +673,9 @@ p.copy-right a{
 	.container {
 		width:90%;
 	}
+	.footer .container {
+		width:100%;
+	}
  	.years p {
 		width: 100%;
 		line-height: 1.6em;

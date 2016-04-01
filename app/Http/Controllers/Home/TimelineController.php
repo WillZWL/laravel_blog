@@ -15,11 +15,7 @@ class TimelineController extends Controller {
 	public function index()
 	{
 		//
-		$years = [];
-		for ($i = 2016; $i >= 2014; $i--) {
-			$timelines = Timeline::where(\DB::raw('YEAR(start_date)'), '=', $i)->orderby('start_date', 'desc')->take(50)->get();
-			$years[$i] = $timelines;
-		}
+		$years = Timeline::getTimeline();
 
 		return view('home.timeline.index',compact('years'));
 	}

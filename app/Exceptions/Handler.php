@@ -36,6 +36,15 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
-        return parent::render($request, $e);
+        if ($this->isHttpException($e)) {
+            return $this->renderHttpException($e);
+        } else {
+            // Custom error 500 view on production
+            if (app()->environment() == 'production') {
+                return response()->view('errors.503', [], 500);
+            }
+            return parent::render($request, $e);
+        }
+        // return parent::render($request, $e);
     }
 }

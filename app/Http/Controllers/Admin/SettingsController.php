@@ -5,6 +5,7 @@ use App\User;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SettingRequest;
 
+
 class SettingsController extends AdminController
 {
     /**
@@ -120,7 +121,7 @@ class SettingsController extends AdminController
 
     public function flush()
     {
-        // /Cache::flush();
+        \Cache::flush();
         return redirect('admin/settings/index');
     }
 }

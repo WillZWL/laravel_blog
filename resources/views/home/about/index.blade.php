@@ -83,7 +83,7 @@
 				<h3><a href="/timeline">Work Experience</a></h3>
 			  <div class="years">
 				<h4><b>2012-2014</b></h4>
-				 <span><h4>友谊吧论坛， 小树林校园在线社区</h4></span>
+				 <span><h4>友谊吧论坛</h4></span>
 				 <p>在线期间曾Discuz搭建一个关于友谊的论坛社区，独立完成网站前期的策划，建设，运营维护， 后来又基于ThinkSNS 二次开发过一个校园社区。在这两个校园项目中， 积累并且熟悉了网站开发的基本过程，熟悉了MVC的网站开发过程，能对流行的开源系统机型简单的二次开发与定制。</p>
 			  </div>
 
@@ -102,7 +102,7 @@
 			  <div class="years">
 				 <h4><b>2014－至今</b></h4>
 				 <span><h4>跨境电商</h4></span>
-				<p>在ThinkPHP的开源框架上，开发过B2C商城系统与SNS垂直化社区， 商城实现了多商店管理，企业页面展示， 团购， 秒杀， 招标与竞标，SNS实现了微博的发布， 评论，转发， 在项目中主要负责过商城的后台管理， 团购与秒杀功能的开发</p>
+				 <p>参与设计并开发 WMS（仓库管理系统），CPS（产品管理信息系统）， ValueBasket (跨境电商网站) ...等跨境电商相关系统, 系统极大地提高了公司的业务处理。</p>
 			  </div>
 				<a class="arrow scroll" href="#skills"><span> </span></a>
 		  </div>
@@ -188,7 +188,7 @@
 					</div>
 					<div class="portfolio-grid col-md-4">
 						  <a href="#"><img src="/about/images/monitr3.png"></a>
-						  <p>WMS  物流管理系统</p>
+						  <p>WMS  仓库管理系统</p>
 						  <!-- <a class="rightarrow" href="#"><span> </span></a> -->
 					</div>
 				    <div class="clear"> </div>

@@ -2,25 +2,27 @@
 <html>
 <head>
 <title>Home {{ setting('site_name') }}</title>
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" href="css/history.css">
-<link rel="stylesheet" href="css/swipebox.css">
+<link rel="stylesheet" href="css/history.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/swipebox.css" type="text/css" media="all" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="{{ setting('site_keywords') }}" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- <link href='http://fonts.useso.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'> -->
-<script src="js/jquery.min.js"></script>
- <!------ Light Box ------>
-<script src="js/jquery.swipebox.min.js"></script>
+<link href='http://fonts.useso.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+<script async src="js/jquery.min.js"></script>
+<script async src="js/jquery.swipebox.min.js"></script>
+<script async src="js/responsiveslides.min.js"></script>
+
+<!------ Light Box ------>
 <script type="text/javascript">
     jQuery(function($) {
         $(".swipebox").swipebox();
     });
 </script>
 <!------ Eng Light Box ------>
-<script src="js/responsiveslides.min.js"></script>
 <script>
 $(function () {
   $("#slider").responsiveSlides({

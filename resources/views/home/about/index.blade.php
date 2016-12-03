@@ -6,7 +6,6 @@
 	<link href="/about/css/bootstrap.css" rel='stylesheet' type='text/css' />
 	<link href="/about/css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
-	<!-- <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<!---- start-smoth-scrolling---->
@@ -132,6 +131,31 @@
 										<div class="col-md-3">
 											<div class="skill-grid">
 												<h3>JAVASCRIPT</h3>
+											 </div>
+										</div>
+										<div class="clearfix"> </div>
+								  </div>
+						   </div>
+						   <div id="canvas">
+								<div class="skill-grids text-center">
+										<div class="col-md-3">
+											<div class="skill-grid">
+												<h3>Vue</h3>
+											 </div>
+										</div>
+										<div class="col-md-3">
+											<div class="skill-grid">
+												<h3>Nodejs</h3>
+											 </div>
+										</div>
+										<div class="col-md-3">
+											<div class="skill-grid">
+												<h3>Electron</h3>
+											 </div>
+										</div>
+										<div class="col-md-3">
+											<div class="skill-grid">
+												<h3>Gulp/Webpack</h3>
 											 </div>
 										</div>
 										<div class="clearfix"> </div>

@@ -209,6 +209,21 @@
 					 </div>
 					<div class="clear"> </div>
 				</div>
+				<div class="portfolio-grids">
+					<div class="portfolio-grid col-md-4">
+						 <a href="http://music.xixi-haha.com/"><img src="/about/images/monitr1.png"></a>
+						  <p>Vue Music Player</p>
+					</div>
+					<div class="portfolio-grid col-md-4">
+						  <a href="http://google.xixi-haha.com/"><img src="/about/images/monitr2.png"></a>
+						  <p>Gu Ge Ge</p>
+					</div>
+					<div class="portfolio-grid col-md-4">
+						  <a href="http://ppt2html.xixi-haha.com/"><img src="/about/images/monitr3.png"></a>
+						  <p>PPT To HTML</p>
+					 </div>
+					<div class="clear"> </div>
+				</div>
 				<a class="portdown scroll" href="#contact"><span> </span></a>
 			</div>
 	  </div>

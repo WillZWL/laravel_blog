@@ -31,9 +31,7 @@
 				   </div>
 				  <div class="nav">
 					<ul>
-						<li><a href="/abouts/zh-cn">zh-cn</a></li>
-						<!-- <li>/</li> -->
-						<li><a href="/abouts/en">en</a></li>
+						<li><a href="/blog">Blog</a></li>
 					</ul>
 					 <!-- <ul>
 						 <li><a class="col-md-6" href="#skills">{{ trans('about.skill')}}</a></li>

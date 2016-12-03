@@ -71,7 +71,8 @@ Route::get('logout', 'Admin\AuthController@logout');
  * home
  */
 Route::group(['namespace' => 'Home', 'middleware' => 'httpcache'], function () {
-    Route::get('/', 'HomeController@index');
+    Route::get('/', 'AboutController@index');
+    Route::get('/blog', 'HomeController@index');
     Route::get('tags', 'TagsController@index');
     Route::get('tags/{slug}', 'TagsController@show');
     Route::get('categories', 'CategoriesController@index');

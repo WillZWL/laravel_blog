@@ -141,6 +141,31 @@
 								<div class="skill-grids text-center">
 										<div class="col-md-3">
 											<div class="skill-grid">
+												<h3>Vue</h3>
+											 </div>
+										</div>
+										<div class="col-md-3">
+											<div class="skill-grid">
+												<h3>Nodejs</h3>
+											 </div>
+										</div>
+										<div class="col-md-3">
+											<div class="skill-grid">
+												<h3>Electron</h3>
+											 </div>
+										</div>
+										<div class="col-md-3">
+											<div class="skill-grid">
+												<h3>GULP/WEBPACK</h3>
+											 </div>
+										</div>
+										<div class="clearfix"> </div>
+								  </div>
+						   </div>
+						   <div id="canvas">
+								<div class="skill-grids text-center">
+										<div class="col-md-3">
+											<div class="skill-grid">
 												<h3>ThinkPHP</h3>
 											 </div>
 										</div>

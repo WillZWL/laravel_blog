@@ -1,4 +1,6 @@
-<?php namespace App\Http\Controllers\Home;
+<?php
+
+namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
 use App\Article;
@@ -18,6 +20,7 @@ class ArticlesController extends Controller
         $articles = Article::latest()->paginate($page_size);
         $categories = Category::getSortedCategories();
         $tags = Tag::get_all();
+
         return view('home.articles.index', compact('articles', 'categories', 'tags'));
     }
 
@@ -34,6 +37,7 @@ class ArticlesController extends Controller
             $article = Article::findBySlug($slug);
             $categories = Category::getSortedCategories();
             $tags = Tag::get_all();
+
             return view('home.articles.show', compact('article', 'categories', 'tags'));
         } catch (\Exception $e) {
             return redirect('./404.html');

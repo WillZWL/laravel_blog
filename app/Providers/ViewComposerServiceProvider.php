@@ -1,4 +1,6 @@
-<?php namespace App\Providers;
+<?php
+
+namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -18,13 +20,11 @@ class ViewComposerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
     }
 
     private function composeSidebar()
     {
         view()->composer('home.partials.sidebar', function ($view) {
-
             $allTags = \App\Tag::all();
             $allCategories = \App\Category::getSortedCategories();
             $NewestArticles = \App\Article::latest()->take(15)->get();

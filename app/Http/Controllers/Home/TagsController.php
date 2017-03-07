@@ -1,4 +1,6 @@
-<?php namespace App\Http\Controllers\Home;
+<?php
+
+namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
 use App\Tag;
@@ -12,7 +14,6 @@ class TagsController extends Controller
      */
     public function index()
     {
-        //
     }
 
     /**

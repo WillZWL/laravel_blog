@@ -5,6 +5,7 @@ namespace App\Services;
 use Carbon\Carbon;
 use Dflydev\ApacheMimeTypes\PhpRepository;
 use Illuminate\Support\Facades\Storage;
+
 class UploadsManager
 {
     protected $disk;
@@ -17,16 +18,17 @@ class UploadsManager
     }
 
     /**
-     * Return files and directories within a folder
+     * Return files and directories within a folder.
      *
      * @param string $folder
+     *
      * @return array of [
-     *     'folder' => 'path to current folder',
-     *     'folderName' => 'name of just current folder',
-     *     'breadCrumbs' => breadcrumb array of [ $path => $foldername ]
-     *     'folders' => array of [ $path => $foldername] of each subfolder
-     *     'files' => array of file details on each file in folder
-     * ]
+     *               'folder' => 'path to current folder',
+     *               'folderName' => 'name of just current folder',
+     *               'breadCrumbs' => breadcrumb array of [ $path => $foldername ]
+     *               'folders' => array of [ $path => $foldername] of each subfolder
+     *               'files' => array of file details on each file in folder
+     *               ]
      */
     public function folderInfo($folder)
     {
@@ -57,15 +59,15 @@ class UploadsManager
     }
 
     /**
-     * Sanitize the folder name
+     * Sanitize the folder name.
      */
     protected function cleanFolder($folder)
     {
-        return '/' . trim(str_replace('..', '', $folder), '/');
+        return '/'.trim(str_replace('..', '', $folder), '/');
     }
 
     /**
-     * 返回当前目录路径
+     * 返回当前目录路径.
      */
     protected function breadcrumbs($folder)
     {
@@ -87,11 +89,11 @@ class UploadsManager
     }
 
     /**
-     * 返回文件详细信息数组
+     * 返回文件详细信息数组.
      */
     protected function fileDetails($path)
     {
-        $path = '/' . ltrim($path, '/');
+        $path = '/'.ltrim($path, '/');
 
         return [
             'name' => basename($path),
@@ -104,16 +106,17 @@ class UploadsManager
     }
 
     /**
-     * 返回文件完整的web路径
+     * 返回文件完整的web路径.
      */
     public function fileWebpath($path)
     {
-        $path = rtrim(config('blog.uploads.webpath'), '/') . '/' .ltrim($path, '/');
+        $path = rtrim(config('blog.uploads.webpath'), '/').'/'.ltrim($path, '/');
+
         return url($path);
     }
 
     /**
-     * 返回文件MIME类型
+     * 返回文件MIME类型.
      */
     public function fileMimeType($path)
     {
@@ -123,7 +126,7 @@ class UploadsManager
     }
 
     /**
-     * 返回文件大小
+     * 返回文件大小.
      */
     public function fileSize($path)
     {
@@ -131,7 +134,7 @@ class UploadsManager
     }
 
     /**
-     * 返回最后修改时间
+     * 返回最后修改时间.
      */
     public function fileModified($path)
     {
@@ -152,7 +155,7 @@ class UploadsManager
     }
 
     /**
-     * 删除目录
+     * 删除目录.
      */
     public function deleteDirectory($folder)
     {
@@ -162,36 +165,36 @@ class UploadsManager
             $this->disk->directories($folder),
             $this->disk->files($folder)
         );
-        if (! empty($filesFolders)) {
-            return "Directory must be empty to delete it.";
+        if (!empty($filesFolders)) {
+            return 'Directory must be empty to delete it.';
         }
 
         return $this->disk->deleteDirectory($folder);
     }
 
     /**
-     * 删除文件
+     * 删除文件.
      */
     public function deleteFile($path)
     {
         $path = $this->cleanFolder($path);
 
-        if (! $this->disk->exists($path)) {
-            return "File does not exist.";
+        if (!$this->disk->exists($path)) {
+            return 'File does not exist.';
         }
 
         return $this->disk->delete($path);
     }
 
     /**
-     * 保存文件
+     * 保存文件.
      */
     public function saveFile($path, $content)
     {
         $path = $this->cleanFolder($path);
 
         if ($this->disk->exists($path)) {
-            return "File already exists.";
+            return 'File already exists.';
         }
 
         return $this->disk->put($path, $content);

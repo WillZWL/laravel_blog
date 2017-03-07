@@ -1,21 +1,18 @@
-<?php namespace App\Http\Controllers\Home;
+<?php
 
-use App\Http\Requests;
+namespace App\Http\Controllers\Home;
+
 use App\Http\Controllers\Controller;
 
-use Illuminate\Http\Request;
-
-class GallerysController extends Controller {
-
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function index()
-	{
-		//
-		return view('home.gallery.index');
-	}
-
+class GallerysController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return Response
+     */
+    public function index()
+    {
+        return view('home.gallery.index');
+    }
 }

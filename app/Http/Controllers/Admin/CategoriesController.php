@@ -1,6 +1,7 @@
-<?php namespace App\Http\Controllers\Admin;
+<?php
 
-use App\Http\Controllers\Controller;
+namespace App\Http\Controllers\Admin;
+
 use App\Category;
 use App\Http\Requests\CategoryRequest;
 
@@ -109,6 +110,7 @@ class CategoriesController extends AdminController
     {
         Category::where('id', '=', $id)->delete();
         \Cache::tags('categories')->flush();
+
         return redirect('admin/categories/index');
     }
 }

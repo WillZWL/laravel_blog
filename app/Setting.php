@@ -1,4 +1,6 @@
-<?php namespace App;
+<?php
+
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,7 +12,6 @@ class Setting extends Model
     public static function getSettingsArr()
     {
         return \Cache::rememberForever('settings_array', function () {
-
             $settings = \App\Setting::all()->lists('value', 'name');
 
             return $settings;
@@ -20,6 +21,7 @@ class Setting extends Model
     public static function getSettingValue($name)
     {
         $settings = self::getSettingsArr();
+
         return $settings[$name];
     }
 }

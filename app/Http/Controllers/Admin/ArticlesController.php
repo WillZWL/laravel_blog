@@ -1,7 +1,8 @@
-<?php namespace App\Http\Controllers\Admin;
+<?php
+
+namespace App\Http\Controllers\Admin;
 
 use App\Article;
-use App\Http\Controllers\Controller;
 use App\Http\Requests\ArticleRequest;
 
 class ArticlesController extends AdminController
@@ -100,6 +101,7 @@ class ArticlesController extends AdminController
         }
         $article->update($request_data);
         $this->syncTags($article, $request->input('tag_list'));
+
         return redirect('admin/articles/index');
     }
 
@@ -164,18 +166,19 @@ class ArticlesController extends AdminController
     public function uploadImage()
     {
         if ($file = \Request::file('image')) {
-            $allowed_extensions = ["png", "jpg", "gif", 'jpeg'];
+            $allowed_extensions = ['png', 'jpg', 'gif', 'jpeg'];
             if ($file->getClientOriginalExtension() && !in_array($file->getClientOriginalExtension(), $allowed_extensions)) {
                 return ['error' => 'You may only upload png, jpg or gif.'];
             }
-            $fileName        = $file->getClientOriginalName();
-            $extension       = $file->getClientOriginalExtension() ?: 'png';
-            $folderName      = '/uploads/images/'.date('Y').'/'.date('m').'/';
+            $fileName = $file->getClientOriginalName();
+            $extension = $file->getClientOriginalExtension() ?: 'png';
+            $folderName = '/uploads/images/'.date('Y').'/'.date('m').'/';
             $destinationPath = public_path().$folderName;
-            $safeName        = uniqid().'.'.$extension;
+            $safeName = uniqid().'.'.$extension;
             $file->move($destinationPath, $safeName);
             $filePath = $folderName.$safeName;
             $cdnPath = cdn($filePath);
+
             return $cdnPath;
         }
     }

@@ -1,6 +1,7 @@
-<?php namespace App\Http\Controllers\Admin;
+<?php
 
-use App\Http\Controllers\Controller;
+namespace App\Http\Controllers\Admin;
+
 use App\Tag;
 use App\Http\Requests\TagRequest;
 

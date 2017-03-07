@@ -1,26 +1,25 @@
-<?php namespace App\Http\Requests;
+<?php
 
-use App\Http\Requests\Request;
+namespace App\Http\Requests;
 
-class MessageRequest extends Request {
+class MessageRequest extends Request
+{
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     */
+    public function authorize()
+    {
+        return true;
+    }
 
-	/**
-	 * Get the validation rules that apply to the request.
-	 *
-	 * @return array
-	 */
-	public function authorize()
-	{
-		return true;
-	}
-
-	public function rules()
-	{
-		return [
-			'email'=>'required',
-			'subject'=>'required',
-			'message'=>'required',
-		];
-	}
-
+    public function rules()
+    {
+        return [
+            'email' => 'required',
+            'subject' => 'required',
+            'message' => 'required',
+        ];
+    }
 }

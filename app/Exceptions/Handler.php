@@ -1,4 +1,6 @@
-<?php namespace App\Exceptions;
+<?php
+
+namespace App\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
@@ -43,6 +45,7 @@ class Handler extends ExceptionHandler
             if (app()->environment() == 'production') {
                 return response()->view('errors.503', [], 500);
             }
+
             return parent::render($request, $e);
         }
         // return parent::render($request, $e);

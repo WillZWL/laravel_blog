@@ -1,10 +1,10 @@
-<?php namespace App\Http\Controllers\Admin;
+<?php
+
+namespace App\Http\Controllers\Admin;
 
 use App\Setting;
 use App\User;
-use App\Http\Controllers\Controller;
 use App\Http\Requests\SettingRequest;
-
 
 class SettingsController extends AdminController
 {
@@ -27,7 +27,6 @@ class SettingsController extends AdminController
      */
     public function create()
     {
-        //
     }
 
     /**
@@ -62,7 +61,6 @@ class SettingsController extends AdminController
      */
     public function show($id)
     {
-        //
     }
 
     /**
@@ -74,7 +72,6 @@ class SettingsController extends AdminController
      */
     public function edit($id)
     {
-        //
     }
 
     /**
@@ -86,7 +83,6 @@ class SettingsController extends AdminController
      */
     public function store($id)
     {
-        //
     }
 
     /**
@@ -98,12 +94,12 @@ class SettingsController extends AdminController
      */
     public function destroy($id)
     {
-        //
     }
 
     public function user()
     {
         $users = User::latest()->paginate(15);
+
         return view('admin.settings.user', compact('users'));
     }
 
@@ -111,17 +107,18 @@ class SettingsController extends AdminController
     {
         $user = User::findOrFail($id);
         $users = \App\User::lists('username', 'id', 'email');
+
         return view('admin.settings.user_edit', compact('user', 'users'));
     }
 
     public function user_update()
     {
-
     }
 
     public function flush()
     {
         \Cache::flush();
+
         return redirect('admin/settings/index');
     }
 }

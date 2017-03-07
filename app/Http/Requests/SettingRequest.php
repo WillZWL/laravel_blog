@@ -1,5 +1,6 @@
-<?php namespace App\Http\Requests;
+<?php
 
+namespace App\Http\Requests;
 
 class SettingRequest extends Request
 {
@@ -21,7 +22,7 @@ class SettingRequest extends Request
     public function rules()
     {
         return [
-            //
+
         ];
     }
 }

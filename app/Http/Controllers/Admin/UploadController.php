@@ -19,18 +19,19 @@ class UploadController extends Controller
     }
 
     /**
-     * Show page of files / subfolders
+     * Show page of files / subfolders.
      */
     public function index(Request $request)
     {
         $folder = $request->get('folder');
         $data = $this->manager->folderInfo($folder);
+
         return view('admin.upload.index', $data);
     }
 
     /**
-    * 创建新目录
-    */
+     * 创建新目录.
+     */
     public function createFolder(UploadNewFolderRequest $request)
     {
         $new_folder = $request->get('new_folder');
@@ -44,14 +45,15 @@ class UploadController extends Controller
                 ->withSuccess("Folder '$new_folder' created.");
         }
 
-        $error = $result ? : "An error occurred creating directory.";
+        $error = $result ?: 'An error occurred creating directory.';
+
         return redirect()
                 ->back()
                 ->withErrors([$error]);
     }
 
     /**
-     * 删除文件
+     * 删除文件.
      */
     public function deleteFile(Request $request)
     {
@@ -66,14 +68,15 @@ class UploadController extends Controller
                 ->withSuccess("File '$del_file' deleted.");
         }
 
-        $error = $result ? : "An error occurred deleting file.";
+        $error = $result ?: 'An error occurred deleting file.';
+
         return redirect()
                 ->back()
                 ->withErrors([$error]);
     }
 
     /**
-     * 删除目录
+     * 删除目录.
      */
     public function deleteFolder(Request $request)
     {
@@ -88,21 +91,22 @@ class UploadController extends Controller
                 ->withSuccess("Folder '$del_folder' deleted.");
         }
 
-        $error = $result ? : "An error occurred deleting directory.";
+        $error = $result ?: 'An error occurred deleting directory.';
+
         return redirect()
                 ->back()
                 ->withErrors([$error]);
     }
 
     /**
-     * 上传文件
+     * 上传文件.
      */
     public function uploadFile(UploadFileRequest $request)
     {
         $file = $_FILES['file'];
         $fileName = $request->get('file_name');
         $fileName = $fileName ?: $file['name'];
-        $path = str_finish($request->get('folder'), '/') . $fileName;
+        $path = str_finish($request->get('folder'), '/').$fileName;
         $content = File::get($file['tmp_name']);
 
         $result = $this->manager->saveFile($path, $content);
@@ -113,7 +117,8 @@ class UploadController extends Controller
                     ->withSuccess("File '$fileName' uploaded.");
         }
 
-        $error = $result ? : "An error occurred uploading file.";
+        $error = $result ?: 'An error occurred uploading file.';
+
         return redirect()
                 ->back()
                 ->withErrors([$error]);
